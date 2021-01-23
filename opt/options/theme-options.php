@@ -4,34 +4,34 @@ if( class_exists( 'CSF' ) ) {
   $prefix = 'iro_options';
 
   CSF::createOptions( $prefix, array(
-    'menu_title' => 'iro 主题设置',
+    'menu_title' => 'iro 主題設置',
     'menu_slug'  => 'iro_options',
   ) );
 
   CSF::createSection( $prefix, array(
     'id'    => 'preliminary',
-    'title' => '初步设置',
+    'title' => '初步設置',
     'icon'      => 'fa fa-sliders',
     'fields' => array(
 
       array(
         'id'    => 'site_name',
         'type'  => 'text',
-        'title' => '站点名称',
+        'title' => '站點名稱',
         'desc'   => '例如：Fuukei Blog',
       ),
 
       array(
         'id'    => 'author_name',
         'type'  => 'text',
-        'title' => '作者名称',
+        'title' => '作者名稱',
         'desc'   => '例如：Fuukei',
       ),
 
       array(
         'id'    => 'personal_avatar',
         'type'  => 'upload',
-        'title' => '个人头像',
+        'title' => '個人頭像',
         'desc'   => '最佳比例1比1',
         'library'      => 'image',
       ),
@@ -39,34 +39,34 @@ if( class_exists( 'CSF' ) ) {
       array(
         'id'    => 'text_logo_options',
         'type'  => 'switcher',
-        'title' => '白猫特效文字',
-        'label'   => '开启之后将替换个人头像作为首页显示内容',
+        'title' => '白貓特效文字',
+        'label'   => '開啟之後將替換個人頭像作為首頁顯示內容',
         'default' => false
       ),
 
       array(
         'id'        => 'text_logo',
         'type'      => 'fieldset',
-        'title'     => '白猫特效文字',
+        'title'     => '白貓特效文字',
         'dependency' => array( 'text_logo_options', '==', 'true' ),
         'fields'    => array(
           array(
             'id'     => 'text',
             'type'   => 'text',
             'title'  => '文本',
-            'desc'   => '文本内容建议不要过长，推荐长度为16个字节。',
+            'desc'   => '文本內容建議不要過長，推薦長度為16個字節。',
           ),
           array(
             'id'     => 'font',
             'type'   => 'text',
-            'title'  => '字体',
-            'desc'   => '填写字体名称。例如：Ma Shan Zheng',
+            'title'  => '字體',
+            'desc'   => '填寫字體名稱。例如：Ma Shan Zheng',
           ),
           array(
             'id'     => 'size',
             'type'   => 'slider',
-            'title'  => '字体大小',
-            'desc'   => '滑动滑块，推荐数值范围为70-90',
+            'title'  => '字體大小',
+            'desc'   => '滑動滑塊，推薦數值範圍為70-90',
             'unit'    => 'px',
             'min'   => '40',
             'max'   => '140',
@@ -74,8 +74,8 @@ if( class_exists( 'CSF' ) ) {
           array(
             'id'      => 'color',
             'type'    => 'color',
-            'title'   => '字体颜色',
-            'desc'    => '自定义颜色，建议使用浅色系颜色',
+            'title'   => '字體顏色',
+            'desc'    => '自定義顏色，建議使用淺色系顏色',
           ),      
         ),
         'default'        => array(
@@ -88,41 +88,41 @@ if( class_exists( 'CSF' ) ) {
       array(
         'id'    => 'iro_logo',
         'type'  => 'upload',
-        'title' => '导航菜单Logo',
-        'desc'   => '最佳尺寸40px，填写后导航菜单文字Logo不显示',
+        'title' => '導航菜單Logo',
+        'desc'   => '最佳尺寸40px，填寫後導航菜單文字Logo不顯示',
         'library'      => 'image',
       ),
 
       array(
         'id'    => 'favicon_link',
         'type'  => 'text',
-        'title' => '站点Logo',
-        'desc'   => '填写地址，站点Logo即浏览器上方标题旁的图标',
+        'title' => '站點Logo',
+        'desc'   => '填寫地址，站點Logo即瀏覽器上方標題旁的圖標',
         'default' => 'https://cdn.jsdelivr.net/gh/Fuukei/Public_Repository@latest/vision/basic/favicon.ico'
       ),
 
       array(
         'id'    => 'iro_meta',
         'type'  => 'switcher',
-        'title' => '自定义站点关键词和描述',
-        'label'   => '开启之后可自定义填写站点关键词和描述',
+        'title' => '自定義站點關鍵字和描述',
+        'label'   => '開啟之後可自定義填充站點關鍵字和描述',
         'default' => false
       ),
 
       array(
         'id'     => 'iro_meta_keywords',
         'type'   => 'text',
-        'title'  => '站点关键词',
+        'title'  => '站點關鍵詞',
         'dependency' => array( 'iro_meta', '==', 'true' ),
-        'desc'   => '各关键字间用半角逗号","分割，数量在5个以内最佳',
+        'desc'   => '各關鍵字間用半角逗號“，”分割，數量在5個以內最佳',
       ),
 
       array(
         'id'     => 'iro_meta_description',
         'type'   => 'text',
-        'title'  => '站点描述',
+        'title'  => '站點描述',
         'dependency' => array( 'iro_meta', '==', 'true' ),
-        'desc'   => '用简洁的文字描述本站点，字数建议在120个字以内',
+        'desc'   => '用簡潔的文字描述本站點，字數建議在120個字以內',
       ),
 
     )
@@ -130,34 +130,34 @@ if( class_exists( 'CSF' ) ) {
 
   CSF::createSection( $prefix, array(
     'id'    => 'global', 
-    'title' => '全局设置',
+    'title' => '全局設置',
     'icon'      => 'fa fa-globe',
   ) );
 
   CSF::createSection( $prefix, array(
     'parent' => 'global', 
-    'title'  => '外观设置',
+    'title'  => '外觀設置',
     'icon'      => 'fa fa-tree',
     'fields' => array(
 
       array(
         'type'    => 'subheading',
-        'content' => '主题配色',
+        'content' => '主題配色',
       ),
 
       array(
         'id'      => 'theme_skin',
         'type'    => 'color',
-        'title'   => '主题色',
-        'desc'    => '自定义颜色',
+        'title'   => '主題色',
+        'desc'    => '自定義顏色',
         'default' => '#505050'
       ),  
 
       array(
         'id'      => 'theme_skin_matching',
         'type'    => 'color',
-        'title'   => '主题色搭配色',
-        'desc'    => '自定义颜色',
+        'title'   => '主題色搭配色',
+        'desc'    => '自定義顏色',
         'default' => '#ffe066'
       ),  
 
@@ -169,24 +169,24 @@ if( class_exists( 'CSF' ) ) {
       array(
         'id'      => 'theme_skin_dark',
         'type'    => 'color',
-        'title'   => '深色模式主题色',
-        'desc'    => '自定义颜色',
+        'title'   => '深色模式主題色',
+        'desc'    => '自定義顏色',
         'default' => '#ffcc00'
       ),  
 
       array(
         'id'    => 'theme_darkmode_auto',
         'type'  => 'switcher',
-        'title' => '深色模式自动切换',
-        'label'   => '默认开启，深色模式会在22:00-7:00自动切换',
+        'title' => '深色模式自動切換',
+        'label'   => '默認開啟，深色模式會在22:00-7:00自動切換',
         'default' => true
       ),
 
       array(
         'id'     => 'theme_darkmode_img_bright',
         'type'   => 'slider',
-        'title'  => '深色模式图像亮度',
-        'desc'   => '滑动滑块，推荐数值范围为0.6-0.8',
+        'title'  => '深色模式圖像亮度',
+        'desc'   => '滑動滑塊，推薦數值範圍為0.6-0.8',
         'step'   => '0.01',
         'min'   => '0.4',
         'max'   => '1',
@@ -197,7 +197,7 @@ if( class_exists( 'CSF' ) ) {
         'id'     => 'theme_darkmode_widget_transparency',
         'type'   => 'slider',
         'title'  => '深色模式部件透明度',
-        'desc'   => '滑动滑块，推荐数值范围为0.6-0.8',
+        'desc'   => '滑動滑塊，推薦數值範圍為0.6-0.8',
         'step'   => '0.01',
         'min'   => '0.2',
         'max'   => '1',
@@ -212,8 +212,8 @@ if( class_exists( 'CSF' ) ) {
       array(
         'id'     => 'load_out_svg',
         'type'   => 'text',
-        'title'  => '加载控件单元占位SVG',
-        'desc'   => '填写地址，此为加载控件单元时占位显示的SVG',
+        'title'  => '加載控件單元佔位SVG',
+        'desc'   => '填寫地址，此為加載控件單元時佔位顯示的SVG',
         'default' => 'https://cdn.jsdelivr.net/gh/Fuukei/Public_Repository@latest/vision/load_svg/outload.svg'
       ),
 
@@ -222,7 +222,7 @@ if( class_exists( 'CSF' ) ) {
 
   CSF::createSection( $prefix, array(
     'parent' => 'global', 
-    'title'  => '字体设置',
+    'title'  => '字體設置',
     'icon'      => 'fa fa-font',
     'fields' => array(
 
@@ -234,8 +234,8 @@ if( class_exists( 'CSF' ) ) {
       array(
         'id'     => 'global_font_weight',
         'type'   => 'slider',
-        'title'  => '非强调文本字重',
-        'desc'   => '滑动滑块，推荐数值范围为300-500',
+        'title'  => '非強調文本字重',
+        'desc'   => '滑動滑塊，推薦數值範圍為300-500',
         'step'   => '10',
         'min'   => '100',
         'max'   => '700',
@@ -245,8 +245,8 @@ if( class_exists( 'CSF' ) ) {
       array(
         'id'     => 'global_font_size',
         'type'   => 'slider',
-        'title'  => '文本字体大小',
-        'desc'   => '滑动滑块，推荐数值范围为15-18',
+        'title'  => '文本字體大小',
+        'desc'   => '滑動滑塊，推薦數值範圍為15-18',
         'step'   => '1',
         'unit'    => 'px',
         'min'   => '10',
@@ -256,43 +256,43 @@ if( class_exists( 'CSF' ) ) {
 
       array(
         'type'    => 'subheading',
-        'content' => '外部字体',
+        'content' => '外部字體',
       ),
 
       array(
         'id'    => 'reference_exter_font',
         'type'  => 'switcher',
-        'title' => '引用外部字体',
-        'label'   => '开启之后可以使用外部字体作为默认字体或其他部件字体，但可能影响性能',
+        'title' => '引用外部字體',
+        'label'   => '開啟之後可以使用外部字體作為替代字體或其他部件字體，但可能影響性能',
         'default' => false
       ),
 
       array(
         'id'     => 'exter_font_link',
         'type'   => 'text',
-        'title'  => '外部字体地址',
+        'title'  => '外部字體地址',
         'dependency' => array( 'reference_exter_font', '==', 'true' ),
       ),
 
       array(
         'id'     => 'exter_font_name',
         'type'   => 'text',
-        'title'  => '外部字体名称',
+        'title'  => '外部字體名稱',
         'dependency' => array( 'reference_exter_font', '==', 'true' ),
       ),
 
       array(
         'id'     => 'google_fonts_api',
         'type'   => 'text',
-        'title'  => '谷歌字体API地址',
+        'title'  => '谷歌字體API地址',
         'default' => 'fonts.googleapis.com'
       ),
 
       array(
         'id'     => 'google_fonts_add',
         'type'   => 'text',
-        'title'  => '谷歌字体名称',
-        'desc'   => '请确保添加的字体在谷歌字体库内可被引用，填写字体名称。添加的字体前面必须有”|“。如果引用多个字体，请使用“|”作为分割符，如果字体名称有空格，请用加号替代。例如：|ZCOOL+XiaoWei|Ma+Shan+Zheng ',
+        'title'  => '谷歌字體名稱',
+        'desc'   => '請確保添加的字體在谷歌字體庫內可被引用，填寫字體名稱。添加的字體前面必須有“ |”。如果引用多個字體，請使用“ |”作為分割符，如果字體名稱有空格，請用加號替代。例如：|ZCOOL+XiaoWei|Ma+Shan+Zheng ',
       ),
 
     )
@@ -300,14 +300,14 @@ if( class_exists( 'CSF' ) ) {
 
   CSF::createSection( $prefix, array(
     'parent' => 'global', 
-    'title'  => '导航菜单设置',
+    'title'  => '導航菜單設置',
     'icon'      => 'fa fa-map-signs',
     'fields' => array(
 
       array(
         'id'         => 'nav_menu_style',
         'type'       => 'image_select',
-        'title'      => '导航菜单样式',
+        'title'      => '導航菜單樣式',
         'options'    => array(
           'sakurairo' => 'https://cdn.jsdelivr.net/gh/Fuukei/Public_Repository@latest/vision/options/nav_menu_style_iro.png',
           'sakura' => 'https://cdn.jsdelivr.net/gh/Fuukei/Public_Repository@latest/vision/options/nav_menu_style_sakura.png',
@@ -318,9 +318,9 @@ if( class_exists( 'CSF' ) ) {
       array(
         'id'    => 'nav_menu_radius',
         'type'  => 'slider',
-        'title' => '导航菜单圆角',
+        'title' => '導航菜單圓角',
         'dependency' => array( 'nav_menu_style', '==', 'sakurairo' ),
-        'desc'   => '滑动滑块，推荐数值为15',
+        'desc'   => '滑動滑塊，推薦數值為15',
         'unit'    => 'px',
         'default' => '15'
       ),
@@ -328,9 +328,9 @@ if( class_exists( 'CSF' ) ) {
       array(
         'id'     => 'nav_menu_shrink_animation',
         'type'   => 'slider',
-        'title'  => '导航菜单收缩比率',
+        'title'  => '導航菜單收縮比率',
         'dependency' => array( 'nav_menu_style', '==', 'sakurairo' ),
-        'desc'   => '滑动滑块，根据导航菜单的内容长度自行设置合适的比率，当比率设置为95时则关闭收缩，默认关闭收缩',
+        'desc'   => '滑動滑塊，根據導航菜單的內容長度自行設置合適的比率，當比率設置為95時則關閉收縮，替代關閉收縮',
         'step'   => '0.5',
         'unit'    => '%',
         'max'   => '95',
@@ -341,11 +341,11 @@ if( class_exists( 'CSF' ) ) {
       array(
         'id'         => 'nav_menu_display',
         'type'       => 'radio',
-        'title'      => '导航菜单内容显示',
-        'desc'    => '你可以选择展开显示或者收缩显示导航菜单内容',
+        'title'      => '導航菜單內容顯示',
+        'desc'    => '你可以選擇展開顯示或收縮顯示導航菜單內容',
         'options'    => array(
-          'unfold' => '展开显示',
-          'fold' => '收缩显示',
+          'unfold' => '展開顯示',
+          'fold' => '收縮顯示',
         ),
         'default'    => 'unfold'
       ),
@@ -353,17 +353,17 @@ if( class_exists( 'CSF' ) ) {
       array(
         'id'    => 'nav_menu_animation',
         'type'  => 'switcher',
-        'title' => '导航菜单动画',
-        'label'   => '默认开启，如果关闭，则导航内容将直接显示',
+        'title' => '導航菜單動畫',
+        'label'   => '默認開啟，如果關閉，則導航內容將直接顯示',
         'default' => true
       ),
 
       array(
         'id'     => 'nav_menu_animation_time',
         'type'   => 'slider',
-        'title'  => '导航菜单动画时间',
+        'title'  => '導航菜單動畫時間',
         'dependency' => array( 'nav_menu_animation', '==', 'true' ),
-        'desc'   => '滑动滑块，推荐数值范围为1-2',
+        'desc'   => '滑動滑塊，推薦數值範圍為1-2',
         'step'   => '0.01',
         'unit'    => 's',
         'max'   => '5',
@@ -373,10 +373,10 @@ if( class_exists( 'CSF' ) ) {
       array(
         'id'         => 'nav_menu_icon_size',
         'type'       => 'radio',
-        'title'      => '导航菜单图标大小',
+        'title'      => '導航菜單圖標大小',
         'options'    => array(
-          'standard' => '标准图标',
-          'large' => '大图标',
+          'standard' => '標準圖標',
+          'large' => '大圖標',
         ),
         'default'    => 'standard'
       ),
@@ -384,16 +384,16 @@ if( class_exists( 'CSF' ) ) {
       array(
         'id'    => 'nav_menu_search',
         'type'  => 'switcher',
-        'title' => '导航菜单搜索',
-        'label'   => '默认开启，点击将进入搜索区域',
+        'title' => '導航菜單搜索',
+        'label'   => '默認開啟，點擊將進入搜索區域',
         'default' => true
       ),
 
       array(
         'id'    => 'search_area_background',
         'type'  => 'upload',
-        'title' => '导航菜单搜索区域背景图片',
-        'desc'   => '设置你的搜索区域背景图片，此选项留空则显示白色背景',
+        'title' => '導航菜單搜索區域背景圖片',
+        'desc'   => '設置你的搜索區域背景圖片，此選項留空則顯示白色背景',
         'library'      => 'image',
         'default'     => 'https://cdn.jsdelivr.net/gh/Fuukei/Public_Repository@latest/vision/basic/iloli.gif'
       ),
@@ -401,15 +401,15 @@ if( class_exists( 'CSF' ) ) {
       array(
         'id'    => 'nav_menu_user_avatar',
         'type'  => 'switcher',
-        'title' => '导航菜单用户头像',
-        'label'   => '默认开启，点击将进入登录界面',
+        'title' => '導航菜單用戶頭像',
+        'label'   => '默認開啟，點擊將進入登錄界面',
         'default' => true
       ),
 
       array(
         'id'     => 'unlisted_avatar',
         'type'  => 'upload',
-        'title' => '导航菜单用户未登录头像',
+        'title' => '導航菜單用戶未登錄頭像',
         'dependency' => array( 'nav_menu_user_avatar', '==', 'true' ),
         'desc'   => '最佳比例1比1',
         'library'      => 'image',
@@ -419,8 +419,8 @@ if( class_exists( 'CSF' ) ) {
       array(
         'id'    => 'nav_menu_secondary_arrow',
         'type'  => 'switcher',
-        'title' => '导航菜单二级菜单提示箭头',
-        'label'   => '开启之后菜单提示箭头将出现在导航菜单二级菜单',
+        'title' => '導航菜單二級菜單提示箭頭',
+        'label'   => '開啟之後菜單提示箭頭將出現在導航菜單二級菜單',
         'dependency' => array( 'nav_menu_style', '==', 'sakura' ),
         'default' => false
       ),
@@ -428,23 +428,23 @@ if( class_exists( 'CSF' ) ) {
       array(
         'id'     => 'logo_text',
         'type'   => 'text',
-        'title'  => '导航菜单文字Logo文本',
-        'desc'   => '填写文本内容，如开启白猫样式Logo则此选项无效',
+        'title'  => '導航菜單文字Logo文本',
+        'desc'   => '填寫文本內容，如開啟白貓樣式Logo則此選項無效',
         'dependency' => array( 'mashiro_logo_option', '==', 'false' ),
       ),
 
       array(
         'id'    => 'mashiro_logo_option',
         'type'  => 'switcher',
-        'title' => '导航菜单白猫样式Logo',
-        'label'   => '开启之后白猫样式Logo将出现并替换导航菜单Logo位置',
+        'title' => '導航菜單白貓樣式Logo',
+        'label'   => '開啟之後白貓樣式Logo將出現並替換導航菜單Logo位置',
         'default' => false
       ),
 
       array(
         'id'     => 'mashiro_logo',
         'type'   => 'fieldset',
-        'title'  => '白猫样式Logo选项',
+        'title'  => '白貓樣式Logo選項',
         'dependency' => array( 'mashiro_logo_option', '==', 'true' ),
         'fields' => array(
           array(
@@ -465,17 +465,17 @@ if( class_exists( 'CSF' ) ) {
           array(
             'id'    => 'text_secondary',
             'type'  => 'text',
-            'title' => '二级文字',
+            'title' => '二級文字',
           ),
           array(
             'id'    => 'font_link',
             'type'  => 'text',
-            'title' => '字体链接',
+            'title' => '字體鏈接',
           ),
           array(
             'id'    => 'font_name',
             'type'  => 'text',
-            'title' => '字体名称',
+            'title' => '字體名稱',
           ),
         ),
         'default'        => array(
@@ -489,20 +489,20 @@ if( class_exists( 'CSF' ) ) {
 
   CSF::createSection( $prefix, array(
     'parent' => 'global', 
-    'title'  => '样式菜单和前台背景相关设置',
+    'title'  => '樣式菜單和前台背景相關設置',
     'icon'      => 'fa fa-th-large',
     'fields' => array(
 
       array(
         'type'    => 'subheading',
-        'content' => '样式菜单',
+        'content' => '樣式菜單',
       ),
 
       array(
         'id'         => 'style_menu_display',
         'type'       => 'image_select',
-        'title'      => '样式菜单显示',
-        'desc'    => '你可以选择完整显示或者简单显示样式菜单，完整显示将显示字体切换功能和文本提示',
+        'title'      => '樣式菜單顯示',
+        'desc'    => '您可以選擇完整顯示或簡單顯示樣式菜單，完整顯示將顯示字體切換功能和文本提示',
         'options'    => array(
           'full' => 'https://cdn.jsdelivr.net/gh/Fuukei/Public_Repository@latest/vision/options/style_menu_full.png',
           'mini' => 'https://cdn.jsdelivr.net/gh/Fuukei/Public_Repository@latest/vision/options/style_menu_mini.png',
@@ -513,8 +513,8 @@ if( class_exists( 'CSF' ) ) {
       array(
         'id'    => 'style_menu_radius',
         'type'  => 'slider',
-        'title' => '样式菜单按钮圆角',
-        'desc'   => '滑动滑块，推荐数值为12',
+        'title' => '樣式菜單按鈕圓角',
+        'desc'   => '滑動滑塊，推薦數值為12',
         'unit'    => 'px',
         'default' => '12'
       ),
@@ -522,24 +522,24 @@ if( class_exists( 'CSF' ) ) {
       array(
         'id'      => 'style_menu_background_color',
         'type'    => 'color',
-        'title'   => '样式菜单背景颜色',
-        'desc'    => '自定义颜色，建议使用浅色系颜色',
+        'title'   => '樣式菜單背景顏色',
+        'desc'    => '自定義顏色，建議使用淺色系顏色',
         'default' => 'rgba(255,255,255,0.8)'
       ),   
 
       array(
         'id'      => 'style_menu_selection_color',
         'type'    => 'color',
-        'title'   => '样式菜单选项背景颜色',
-        'desc'    => '自定义颜色，建议使用与主题色相同色系且属于浅色系的颜色',
+        'title'   => '樣式菜單選項背景顏色',
+        'desc'    => '自定義顏色，建議使用與主題色相同色系且屬於淺色系的顏色',
         'default' => '#e8e8e8'
       ),
 
       array(
         'id'    => 'style_menu_selection_radius',
         'type'  => 'slider',
-        'title' => '样式菜单选项界面圆角',
-        'desc'   => '滑动滑块，推荐数值为15',
+        'title' => '樣式菜單選項界面圓角',
+        'desc'   => '滑動滑塊，推薦數值為15',
         'unit'    => 'px',
         'default' => '15'
       ),
@@ -552,80 +552,80 @@ if( class_exists( 'CSF' ) ) {
       array(
         'id'            => 'reception_background',
         'type'          => 'tabbed',
-        'title'         => '前台背景设置',
+        'title'         => '前台背景設置',
         'tabs'          => array(
           array(
-            'title'     => '默认',
+            'title'     => '默認',
             'icon'      => 'fa fa-television',
             'fields'    => array(
               array(
                 'id'    => 'img1',
                 'type'  => 'upload',
-                'title' => '图片',
+                'title' => '圖片',
               ),
             )
           ),
           array(
-            'title'     => '心形图标',
+            'title'     => '心形圖標',
             'icon'      => 'fa fa-heart-o',
             'fields'    => array(
               array(
                 'id'    => 'heart_shaped',
                 'type'  => 'switcher',
-                'title' => '开关',
+                'title' => '開關',
               ),
               array(
                 'id'    => 'img2',
                 'type'  => 'upload',
-                'title' => '图片',
+                'title' => '圖片',
               ),
             )
           ),
           array(
-            'title'     => '星形图标',
+            'title'     => '星形圖標',
             'icon'      => 'fa fa-star-o',
             'fields'    => array(
               array(
                 'id'    => 'star_shaped',
                 'type'  => 'switcher',
-                'title' => '开关',
+                'title' => '開關',
               ),
               array(
                 'id'    => 'img3',
                 'type'  => 'upload',
-                'title' => '图片',
+                'title' => '圖片',
               ),
             )
           ),
           array(
-            'title'     => '方形图标',
+            'title'     => '方形圖標',
             'icon'      => 'fa fa-delicious',
             'fields'    => array(
               array(
                 'id'    => 'square_shaped',
                 'type'  => 'switcher',
-                'title' => '开关',
+                'title' => '開關',
               ),
               array(
                 'id'    => 'img4',
                 'type'  => 'upload',
-                'title' => '图片',
+                'title' => '圖片',
               ),
             )
           ),
           array(
-            'title'     => '柠檬形图标',
+            'title'     => '檸檬形圖標',
             'icon'      => 'fa fa-lemon-o',
             'fields'    => array(
               array(
                 'id'    => 'lemon_shaped',
                 'type'  => 'switcher',
-                'title' => '开关',
+                'title' => '開關',
               ),
               array(
                 'id'    => 'img5',
                 'type'  => 'upload',
-                'title' => '图片',
+                'title' => '圖片',
               ),
             )
           ),
@@ -646,7 +646,7 @@ if( class_exists( 'CSF' ) ) {
         'id'     => 'reception_background_transparency',
         'type'   => 'slider',
         'title'  => '前台背景透明度',
-        'desc'   => '滑动滑块，推荐数值范围为0.6-0.8',
+        'desc'   => '滑動滑塊，推薦數值範圍為0.6-0.8',
         'step'   => '0.01',
         'min'   => '0.2',
         'max'   => '1',
@@ -655,22 +655,22 @@ if( class_exists( 'CSF' ) ) {
 
       array(
         'type'    => 'subheading',
-        'content' => '字体区域',
+        'content' => '字體區域',
       ),
 
       array(
         'id'     => 'global_default_font',
         'type'   => 'text',
-        'title'  => '默认字体/样式菜单字体A',
-        'desc'   => '填写字体名称。例如：Ma Shan Zheng',
+        'title'  => '默認字體/樣式菜單字體A',
+        'desc'   => '填寫字體名稱。例如：Ma Shan Zheng',
       ),
 
       array(
         'id'     => 'global_font_2',
         'type'   => 'text',
-        'title'  => '样式菜单字体B',
+        'title'  => '樣式菜單字體B',
         'dependency' => array( 'style_menu_display', '==', 'full' ),
-        'desc'   => '填写字体名称。例如：Ma Shan Zheng',
+        'desc'   => '填寫字體名稱。例如：Ma Shan Zheng',
       ),
 
     )
@@ -678,21 +678,21 @@ if( class_exists( 'CSF' ) ) {
 
   CSF::createSection( $prefix, array(
     'parent' => 'global', 
-    'title'  => '页尾设置',
+    'title'  => '頁尾設置',
     'icon'      => 'fa fa-caret-square-o-down',
     'fields' => array(
 
       array(
         'id'          => 'aplayer_server',
         'type'        => 'select',
-        'title'       => '页尾在线播放器',
-        'desc'   => '开启之后页尾左下角将出现按钮，点击按钮后页尾在线播放器将显示',
+        'title'       => '頁尾在線播放器',
+        'desc'   => '開啟之後頁尾左下角將出現按鈕，點擊按鈕後頁尾在線播放器將顯示',
         'options'     => array(
-          'off'  => '关闭',
-          'netease'  => '网易云音乐',
-          'kugou'  => '酷狗音乐（可能无法使用）',
-          'baidu'  => '千千音乐（海外服务器无法使用）',
-          'tencent'  => 'QQ音乐（可能无法使用）',
+          'off'  => '關閉',
+          'netease'  => '網易云音樂',
+          'kugou'  => '酷狗音樂（可能無法使用）',
+          'baidu'  => '千千音樂（海外服務器無法使用）',
+          'tencent'  => 'QQ音樂（可能無法使用）',
         ),
         'default'     => 'off'
       ),
@@ -700,18 +700,18 @@ if( class_exists( 'CSF' ) ) {
       array(
         'id'     => 'aplayer_playlistid',
         'type'   => 'text',
-        'title'  => '页尾在线播放器歌单ID',
+        'title'  => '頁尾在線播放器歌單ID',
         'dependency' => array( 'aplayer_server', '!=', 'off' ),
-        'desc'   => '填写歌单ID，例如：https://music.163.com/#/playlist?id=5380675133的歌单ID是5380675133',
+        'desc'   => '填寫歌單ID，例如：https://music.163.com/#/playlist?id=5380675133的歌單ID是5380675133',
         'default' => '5380675133'
       ),
 
       array(
         'id'     => 'aplayer_volume',
         'type'   => 'slider',
-        'title'  => '页尾在线播放器默认音量',
+        'title'  => '頁尾在線播放器默認音量',
         'dependency' => array( 'aplayer_server', '!=', 'off' ),
-        'desc'   => '滑动滑块，推荐数值范围为0.4-0.6',
+        'desc'   => '滑動滑塊，推薦數值範圍為0.4-0.6',
         'step'   => '0.01',
         'max'   => '1',
         'default' => '0.5'
@@ -720,57 +720,57 @@ if( class_exists( 'CSF' ) ) {
       array(
         'id'     => 'aplayer_cookie',
         'type'   => 'textarea',
-        'title'  => '页尾在线播放器网易云音乐Cookies',
+        'title'  => '頁尾在線播放器網易云音樂Cookies',
         'dependency' => array( 'aplayer_server', '==', 'netease' ),
-        'desc'   => '如果你想播放网易云音乐会员专享音乐，请在此选项填入你的帐号Cookies。',
+        'desc'   => '如果你想播放網易云音樂會員專享音樂，請在此選項填入你的帳號Cookies。',
       ),
 
       array(
         'id'    => 'sakura_widget',
         'type'  => 'switcher',
-        'title' => '页尾小部件区',
-        'label'   => '开启之后页尾左下角将出现按钮，点击按钮后页尾小部件区将显示，如果你开启了页尾在线播放器，则会一起显示',
+        'title' => '頁尾小部件區',
+        'label'   => '開啟之後頁尾左下角將出現按鈕，點擊按鈕後頁尾小部件區將顯示，如果你開啟了頁尾在線播放器，則會一起顯示',
         'default' => false
       ),
 
       array(
         'id'     => 'sakura_widget_background',
         'type'  => 'upload',
-        'title' => '页尾小部件区背景',
+        'title' => '頁尾小部件區背景',
         'dependency' => array( 'sakura_widget', '==', 'true' ),
-        'desc'   => '最佳宽度400px，最佳高度460px',
+        'desc'   => '最佳寬度400px，最佳高度460px',
         'library'      => 'image',
       ),
 
       array(
         'id'    => 'footer_sakura_icon',
         'type'  => 'switcher',
-        'title' => '页尾动态樱花图标',
-        'label'   => '开启之后页尾将出现动态樱花图标',
+        'title' => '頁尾動態櫻花圖標',
+        'label'   => '開啟之後頁尾將出現動態櫻花圖標',
         'default' => false
       ),
 
       array(
         'id'    => 'footer_random_word',
         'type'  => 'switcher',
-        'title' => '页尾随机话语',
-        'label'   => '开启之后页尾将出现随机话语',
+        'title' => '頁尾隨機話語',
+        'label'   => '開啟之後頁尾將出現隨機話語',
         'default' => false
       ),
 
       array(
         'id'    => 'footer_load_occupancy',
         'type'  => 'switcher',
-        'title' => '页尾负载占用查询',
-        'label'   => '开启之后页尾将出现负载占用信息',
+        'title' => '頁尾負載佔用查詢',
+        'label'   => '開啟之後頁尾將出現負載佔用信息',
         'default' => false
       ),
 
       array(
         'id'     => 'footer_info',
         'type'   => 'textarea',
-        'title'  => '页尾信息',
-        'desc'   => '页尾说明文字，支持HTML代码',
+        'title'  => '頁尾信息',
+        'desc'   => '頁尾說明文字，支持HTML代碼',
         'default' => 'Copyright &copy; by FUUKEI All Rights Reserved.'
       ),
 
@@ -779,47 +779,47 @@ if( class_exists( 'CSF' ) ) {
 
   CSF::createSection( $prefix, array(
     'parent' => 'global', 
-    'title'  => '鼠标设置',
+    'title'  => '鼠標設置',
     'icon'      => 'fa fa-i-cursor',
     'fields' => array(
 
       array(
         'id'     => 'cursor_nor',
         'type'   => 'text',
-        'title'  => '标准鼠标样式',
-        'desc'   => '应用于全局，填写Cur鼠标文件链接',
+        'title'  => '標準鼠標樣式',
+        'desc'   => '應用於全局，填寫Cur鼠標文件鏈接',
         'default' => 'https://cdn.jsdelivr.net/gh/Fuukei/Public_Repository@latest/vision/cursor/normal.cur'
       ),
 
       array(
         'id'     => 'cursor_no',
         'type'   => 'text',
-        'title'  => '选定鼠标样式',
-        'desc'   => '应用于多种样式，填写Cur鼠标文件链接',
+        'title'  => '選定鼠標樣式',
+        'desc'   => '應用於多種樣式，填寫Cur鼠標文件鏈接',
         'default' => 'https://cdn.jsdelivr.net/gh/Fuukei/Public_Repository@latest/vision/cursor/No_Disponible.cur'
       ),
 
       array(
         'id'     => 'cursor_ayu',
         'type'   => 'text',
-        'title'  => '选中控件单元鼠标样式',
-        'desc'   => '应用于选中某个控件单元，填写Cur鼠标文件链接',
+        'title'  => '選中控件單元鼠標樣式',
+        'desc'   => '應用於選中某個控件單元，填寫Cur鼠標文件鏈接',
         'default' => 'https://cdn.jsdelivr.net/gh/Fuukei/Public_Repository@latest/vision/cursor/ayuda.cur'
       ),
 
       array(
         'id'     => 'cursor_text',
         'type'   => 'text',
-        'title'  => '选中文本鼠标样式',
-        'desc'   => '应用于选中文本，填写Cur鼠标文件链接',
+        'title'  => '選中文本鼠標樣式',
+        'desc'   => '應用於選中文本，填寫Cur鼠標文件鏈接',
         'default' => 'https://cdn.jsdelivr.net/gh/Fuukei/Public_Repository@latest/vision/cursor/texto.cur'
       ),
 
       array(
         'id'     => 'cursor_work',
         'type'   => 'text',
-        'title'  => '工作状态鼠标样式',
-        'desc'   => '应用于加载控件单元，填写Cur鼠标文件链接',
+        'title'  => '工作狀態鼠標樣式',
+        'desc'   => '應用於加載控件單元，填寫Cur鼠標文件鏈接',
         'default' => 'https://cdn.jsdelivr.net/gh/Fuukei/Public_Repository@latest/vision/cursor/work.cur'
       ),
 
@@ -828,53 +828,53 @@ if( class_exists( 'CSF' ) ) {
 
   CSF::createSection( $prefix, array(
     'parent' => 'global', 
-    'title'  => '额外设置',
+    'title'  => '額外設置',
     'icon'      => 'fa fa-gift',
     'fields' => array(
 
       array(
         'type'    => 'subheading',
-        'content' => '特效及动画',
+        'content' => '特效及動畫',
       ),
 
       array(
         'id'    => 'preload_animation',
         'type'  => 'switcher',
-        'title' => '预加载动画',
-        'label'   => '开启之后新页面加载前会有预加载动画，此选项需确保你的页面资源正常加载。',
+        'title' => '預加載動畫',
+        'label'   => '開啟之後新頁面加載前會有預加載動畫，此選項需確保你的頁面資源正常加載。',
         'default' => false
       ),
 
       array(
         'id'      => 'preload_animation_color1',
         'type'    => 'color',
-        'title'   => '预加载动画颜色A',
+        'title'   => '預加載動畫顏色A',
         'dependency' => array( 'preload_animation', '==', 'true' ),
-        'desc'    => '自定义颜色',
+        'desc'    => '自定義顏色',
         'default' => '#ffea99'
       ),   
 
       array(
         'id'      => 'preload_animation_color2',
         'type'    => 'color',
-        'title'   => '预加载动画颜色B',
+        'title'   => '預加載動畫顏色B',
         'dependency' => array( 'preload_animation', '==', 'true' ),
-        'desc'    => '自定义颜色',
+        'desc'    => '自定義顏色',
         'default' => '#ffcc00'
       ),   
 
       array(
         'id'          => 'falling_effects',
         'type'        => 'select',
-        'title'       => '飘落特效',
+        'title'       => '飄落特效',
         'options'     => array(
-          'off'  => '关闭',
-          'sakura-native'  => '樱花 原生数量',
-          'sakura-quarter'  => '樱花 四分之一数量',
-          'sakura-half'  => '樱花 二分之一数量',
-          'sakura-less'  => '樱花 较少数量',
-          'yuki-native'  => '雪花 原生数量',
-          'yuki-half'  => '雪花 二分之一数量',
+          'off'  => '關閉',
+          'sakura-native'  => '櫻花 原生數量',
+          'sakura-quarter'  => '櫻花 四分之一數量',
+          'sakura-half'  => '櫻花 二分之一數量',
+          'sakura-less'  => '櫻花 較少數量',
+          'yuki-native'  => '雪花 原生數量',
+          'yuki-half'  => '雪花 二分之一數量',
         ),
         'default'     => 'off'
       ),
@@ -883,33 +883,33 @@ if( class_exists( 'CSF' ) ) {
         'id'    => 'live2d_options',
         'type'  => 'switcher',
         'title' => 'Live2D看板娘',
-        'label'   => '开启之后页面左下角将加载Live2D看板娘',
+        'label'   => '開啟之後頁面左下角將加載Live2D看板娘',
         'default' => false
       ),
 
       array(
         'id'     => 'live2d_custom_user',
         'type'   => 'text',
-        'title'  => 'Live2D看板娘自定义Github项目用户名',
+        'title'  => 'Live2D看板娘自定義Github項目用戶名',
         'dependency' => array( 'live2d_options', '==', 'true' ),
-        'desc'   => '如果想自定义本选项，你需要先去Github Fork本项目并对本项目进行修改，此处填写Github项目的用户名',
+        'desc'   => '如果想自定義本選項，你需要先去Github Fork本項目並對本項目進行修改，此處填寫Github項目的用戶名',
         'default' => 'mirai-mamori'
       ),
 
       array(
         'id'     => 'live2d_custom_user_ver',
         'type'   => 'text',
-        'title'  => 'Live2D看板娘自定义Github项目版本',
+        'title'  => 'Live2D看板娘自定義Github項目版本',
         'dependency' => array( 'live2d_options', '==', 'true' ),
-        'desc'   => '如果想自定义本选项，你需要先去Github Fork本项目并对本项目进行修改，此处填写Github项目的版本',
+        'desc'   => '如果想自定義本選項，你需要先去Github Fork本項目並對本項目進行修改，此處填寫Github項目的版本',
         'default' => 'latest'
       ),
 
       array(
         'id'    => 'note_effects',
         'type'  => 'switcher',
-        'title' => '音符触动特效',
-        'label'   => '开启之后返回顶部按钮和白猫样式Logo触碰时将有音符声音提示',
+        'title' => '音符觸動特效',
+        'label'   => '開啟之後返回頂部按鈕和白貓樣式Logo觸碰時將有音符聲音提示',
         'default' => false
       ),
 
@@ -922,7 +922,7 @@ if( class_exists( 'CSF' ) ) {
         'id'     => 'poi_pjax',
         'type'   => 'switcher',
         'title'  => 'PJAX局部刷新',
-        'label'   => '开启之后点击新内容将不需要重新加载',
+        'label'   => '開啟之後點擊新內容將不需要重新加載',
         'default' => false
       ),
 
@@ -938,17 +938,17 @@ if( class_exists( 'CSF' ) ) {
         'id'     => 'smoothscroll_option',
         'type'   => 'switcher',
         'title'  => '全局平滑滚动',
-        'label'   => '默认开启，页面滚动将更加平滑',
+        'label'   => '默認開啟，加載頁面將有進度條提示',
         'default' => true
       ),
 
       array(
         'id'         => 'pagenav_style',
         'type'       => 'radio',
-        'title'      => '分页模式',
+        'title'      => '分頁模式',
         'options'    => array(
-          'ajax' => 'Ajax加载',
-          'np' => '上下页',
+          'ajax' => 'Ajax加載',
+          'np' => '上下頁',
         ),
         'default'    => 'ajax'
       ),
@@ -956,10 +956,10 @@ if( class_exists( 'CSF' ) ) {
       array(
         'id'          => 'page_auto_load',
         'type'        => 'select',
-        'title'       => '下一页自动加载',
+        'title'       => '下一頁自動加載',
         'dependency' => array( 'pagenav_style', '==', 'ajax' ),
         'options'     => array(
-          '233'  => '不自动加载',
+          '233'  => '不自動加載',
           '0'  => '0秒',
           '1'  => '1秒',
           '2'  => '2秒',
@@ -978,8 +978,8 @@ if( class_exists( 'CSF' ) ) {
       array(
         'id'     => 'load_nextpage_svg',
         'type'   => 'text',
-        'title'  => '下一页加载占位SVG',
-        'desc'   => '填写地址，此为加载下一页时占位显示的SVG',
+        'title'  => '下一頁加載佔位SVG',
+        'desc'   => '填寫地址，此為加載下一頁時佔位顯示的SVG',
         'default' => 'https://cdn.jsdelivr.net/gh/Fuukei/Public_Repository@latest/vision/load_svg/ball.svg'
       ),
     )
@@ -987,13 +987,13 @@ if( class_exists( 'CSF' ) ) {
 
   CSF::createSection( $prefix, array(
     'id'    => 'homepage', 
-    'title' => '主页设置',
+    'title' => '主頁設置',
     'icon'      => 'fa fa-home',
   ) );
 
   CSF::createSection( $prefix, array(
     'parent' => 'homepage', 
-    'title'  => '封面设置',
+    'title'  => '封面設置',
     'icon'      => 'fa fa-laptop',
     'fields' => array(
 
@@ -1001,23 +1001,23 @@ if( class_exists( 'CSF' ) ) {
         'id'    => 'cover_switch',
         'type'  => 'switcher',
         'title' => '封面',
-        'label'   => '默认开启，如果关闭，则下文所有选项均将失效',
+        'label'   => '默認開啟，如果關閉，則下文所有選項均將失效',
         'default' => true
       ),
 
       array(
         'id'    => 'cover_full_screen',
         'type'  => 'switcher',
-        'title' => '封面全屏显示',
-        'label'   => '默认开启',
+        'title' => '封面全屏顯示',
+        'label'   => '默認開啟',
         'default' => true
       ),
 
       array(
         'id'    => 'cover_radius',
         'type'  => 'slider',
-        'title' => '封面圆角',
-        'desc'   => '滑动滑块，推荐数值范围为15-20',
+        'title' => '封面圓角',
+        'desc'   => '滑動滑塊，推薦數值範圍為15-20',
         'unit'    => 'px',
         'max'    => '60',
         'default' => '15'
@@ -1026,17 +1026,17 @@ if( class_exists( 'CSF' ) ) {
       array(
         'id'    => 'cover_animation',
         'type'  => 'switcher',
-        'title' => '封面动画',
-        'label'   => '默认开启，如果关闭，则封面将直接显示',
+        'title' => '封面動畫',
+        'label'   => '默認開啟，如果關閉，則封面將直接顯示',
         'default' => true
       ),
 
       array(
         'id'     => 'cover_animation_time',
         'type'   => 'slider',
-        'title'  => '封面动画时间',
+        'title'  => '封面動畫時間',
         'dependency' => array( 'cover_animation', '==', 'true' ),
-        'desc'   => '滑动滑块，推荐数值范围为1-2',
+        'desc'   => '滑動滑塊，推薦數值範圍為1-2',
         'step'   => '0.01',
         'unit'    => 's',
         'max'   => '5',
@@ -1046,15 +1046,15 @@ if( class_exists( 'CSF' ) ) {
       array(
         'id'    => 'infor_bar',
         'type'  => 'switcher',
-        'title' => '封面信息栏',
-        'label'   => '默认开启，显示头像、白猫特效文字、签名栏、社交区域',
+        'title' => '封面信息欄',
+        'label'   => '默認開啟，顯示頭像、白貓特效文字、簽名欄、社交區域',
         'default' => true
       ),
 
       array(
         'id'         => 'infor_bar_style',
         'type'       => 'image_select',
-        'title'      => '封面信息栏样式',
+        'title'      => '封面信息欄樣式',
         'options'    => array(
           'v1' => 'https://cdn.jsdelivr.net/gh/Fuukei/Public_Repository@latest/vision/options/infor_bar_style_v1.png',
           'v2' => 'https://cdn.jsdelivr.net/gh/Fuukei/Public_Repository@latest/vision/options/infor_bar_style_v2.png',
@@ -1065,16 +1065,16 @@ if( class_exists( 'CSF' ) ) {
       array(
         'id'      => 'infor_bar_bgcolor',
         'type'    => 'color',
-        'title'   => '封面信息栏背景颜色',
-        'desc'    => '自定义颜色，建议使用浅色系颜色',
+        'title'   => '封面信息欄背景顏色',
+        'desc'    => '自定義顏色，建議使用淺色系顏色',
         'default' => 'rgba(255,255,255,0.8)'
       ),     
 
       array(
         'id'    => 'avatar_radius',
         'type'  => 'slider',
-        'title' => '封面信息栏头像圆角',
-        'desc'   => '滑动滑块，推荐数值为100',
+        'title' => '封面信息欄頭像圓角',
+        'desc'   => '滑動滑塊，推薦數值為100',
         'unit'    => 'px',
         'default' => '100'
       ),
@@ -1082,8 +1082,8 @@ if( class_exists( 'CSF' ) ) {
       array(
         'id'    => 'signature_radius',
         'type'  => 'slider',
-        'title' => '封面签名栏圆角',
-        'desc'   => '滑动滑块，推荐数值范围为10-20',
+        'title' => '封面簽名欄圓角',
+        'desc'   => '滑動滑塊，推薦數值範圍為10-20',
         'unit'    => 'px',
         'default' => '15'
       ),
@@ -1091,24 +1091,24 @@ if( class_exists( 'CSF' ) ) {
       array(
         'id'     => 'signature_text',
         'type'   => 'text',
-        'title'  => '封面签名栏文本',
-        'desc'   => '一段自我描述的话',
-        'default' => '本当の声を響かせてよ'
+        'title'  => '封面簽名欄文本',
+        'desc'   => '一段自我描述的話',
+        'default' => '本當の聲を響かせてよ'
       ),
 
       array(
         'id'     => 'signature_font',
         'type'   => 'text',
-        'title'  => '封面签名栏文本字体',
-        'desc'   => '填写字体名称。例如：Ma Shan Zheng',
+        'title'  => '封面簽名欄文本字體',
+        'desc'   => '填寫字體名稱。例如：Ma Shan Zheng',
         'default' => 'Noto Serif SC'
       ),
 
       array(
         'id'     => 'signature_font_size',
         'type'   => 'slider',
-        'title'  => '封面签名栏文本字体大小',
-        'desc'   => '滑动滑块，推荐数值范围为15-18',
+        'title'  => '封面簽名欄文本字體大小',
+        'desc'   => '滑動滑塊，推薦數值範圍為15-18',
         'unit'    => 'px',
         'min'   => '5',
         'max'   => '20',
@@ -1118,37 +1118,37 @@ if( class_exists( 'CSF' ) ) {
       array(
         'id'     => 'signature_typing',
         'type'   => 'switcher',
-        'title'  => '封面签名栏打字特效',
-        'label'   => '开启之后签名栏文本将增加一段文本并呈现打字特效',
+        'title'  => '封面簽名欄打字特效',
+        'label'   => '開啟之後簽名欄文本將增加一段文本並呈現打字特效',
         'default' => false
       ),
 
       array(
         'id'     => 'signature_typing_marks',
         'type'   => 'switcher',
-        'title'  => '封面签名栏打字特效双引号',
+        'title'  => '封面簽名欄打字特效雙引號',
         'dependency' => array( 'signature_typing', '==', 'true' ),
-        'label'   => '开启之后打字特效将追加双引号',
+        'label'   => '開啟之後打字特效將追加雙引號',
         'default' => false
       ),
 
       array(
         'id'     => 'signature_typing_text',
         'type'   => 'text',
-        'title'  => '封面签名栏打字特效文本',
+        'title'  => '封面簽名欄打字特效文本',
         'dependency' => array( 'signature_typing', '==', 'true' ),
-        'desc'   => '填写打字特效文本部分，文本外必须使用英文双引号，二句话之间使用英文逗号隔开，支持HTML标签',
-        'default' => '"寒蝉黎明之时,便是重生之日。"'
+        'desc'   => '填寫打字特效文本部分，文本外必須使用英文雙引號，二句話之間使用英文逗號隔開，支持HTML標籤',
+        'default' => '"寒蟬黎明之時,便是重生之日。"'
       ),
 
       array(
         'id'          => 'random_graphs_options',
         'type'        => 'select',
-        'title'       => '封面随机图片选项',
+        'title'       => '封面隨機圖片選項',
         'options'     => array(
-          'external_api'  => '外部API随机图片',
-          'webp_optimization'  => 'Webp优化随机图片',
-          'local'  => '本地随机图片',
+          'external_api'  => '外部API隨機圖片',
+          'webp_optimization'  => 'Webp優化隨機圖片',
+          'local'  => '本地隨機圖片',
         ),
         'default'     => 'external_api'
       ),
@@ -1156,44 +1156,44 @@ if( class_exists( 'CSF' ) ) {
       array(
         'id'    => 'random_graphs_mts',
         'type'  => 'switcher',
-        'title' => '封面随机图片多终端分离',
-        'label'   => '默认开启，桌面端和移动端会分别使用不同的随机图片地址',
+        'title' => '封面隨機圖片多終端分離',
+        'label'   => '默認開啟，桌面端和移動端會分別使用不同的隨機圖片地址',
         'default' => true
       ),
 
       array(
         'id'     => 'random_graphs_link',
         'type'   => 'text',
-        'title'  => 'Webp优化/外部API桌面端随机图片地址',
-        'desc'   => '填写地址',
+        'title'  => 'Webp優化/外部API桌面端隨機圖片地址',
+        'desc'   => '填寫地址',
         'default' => 'https://api.iro.tw/webp_pc.php'
       ),
 
       array(
         'type'    => 'submessage',
         'style'   => 'info',
-        'content' => sprintf(__('如果你选择使用Webp优化随机图片，请点击 <a href = "%s">这里</a> 来更新 Manifest 路径', 'sakurairo'), rest_url('sakura/v1/database/update')), 
+        'content' => sprintf(__('如果你選擇使用Webp優化隨機圖片，請點擊 <a href = "%s">這裡</a> 來更新 Manifest 路徑', 'sakurairo'), rest_url('sakura/v1/database/update')), 
       ),
 
       array(
         'id'     => 'random_graphs_link_mobile',
         'type'   => 'text',
-        'title'  => '外部API手机端随机图片地址',
+        'title'  => '外部API手機端隨機圖片地址',
         'dependency' => array( 'random_graphs_mts', '==', 'true' ),
-        'desc'   => '填写地址',
+        'desc'   => '填寫地址',
         'default' => 'https://api.iro.tw/webp_mb.php'
       ),
 
       array(
         'id'          => 'random_graphs_filter',
         'type'        => 'select',
-        'title'       => '封面随机图片滤镜',
+        'title'       => '封面隨機圖片濾鏡',
         'options'     => array(
-          'filter-nothing'  => '无滤镜',
-          'filter-undertint'  => '浅色滤镜',
-          'filter-dim'  => '暗淡滤镜',
-          'filter-grid'  => '网格滤镜',
-          'filter-dot'  => '点状滤镜',
+          'filter-nothing'  => '無濾鏡',
+          'filter-undertint'  => '淺色濾鏡',
+          'filter-dim'  => '暗淡濾鏡',
+          'filter-grid'  => '網格濾鏡',
+          'filter-dot'  => '點狀濾鏡',
         ),
         'default'     => 'filter-nothing'
       ),
@@ -1202,76 +1202,76 @@ if( class_exists( 'CSF' ) ) {
         'id'    => 'wave_effects',
         'type'  => 'switcher',
         'title' => '封面波浪特效',
-        'label'   => '开启之后首页封面底部将出现波浪特效',
+        'label'   => '開啟之後首頁封面底部將出現波浪特效',
         'default' => false
       ),
 
       array(
         'id'    => 'drop_down_arrow',
         'type'  => 'switcher',
-        'title' => '封面下拉箭头',
-        'label'   => '默认开启，首页封面底部显示下拉箭头',
+        'title' => '封面下拉箭頭',
+        'label'   => '默認開啟，首頁封面底部顯示下拉箭頭',
         'default' => true
       ),
 
       array(
         'id'    => 'drop_down_arrow_mobile',
         'type'  => 'switcher',
-        'title' => '封面下拉箭头移动端显示',
+        'title' => '封面下拉箭頭移動端顯示',
         'dependency' => array( 'drop_down_arrow', '==', 'true' ),
-        'label'   => '开启之后移动端首页封面底部将出现下拉箭头',
+        'label'   => '開啟之後移動端首頁封面底部將出現下拉箭頭',
         'default' => false
       ),
 
       array(
         'id'      => 'drop_down_arrow_color',
         'type'    => 'color',
-        'title'   => '封面下拉箭头颜色',
+        'title'   => '封面下拉箭頭顏色',
         'dependency' => array( 'drop_down_arrow', '==', 'true' ),
-        'desc'    => '自定义颜色，建议使用浅色系颜色',
+        'desc'    => '自定義顏色，建議使用淺色系顏色',
         'default' => 'rgba(255,255,255,0.8)'
       ),  
 
       array(
         'id'      => 'drop_down_arrow_dark_color',
         'type'    => 'color',
-        'title'   => '封面下拉箭头深色模式颜色',
+        'title'   => '封面下拉箭頭深色模式顏色',
         'dependency' => array( 'drop_down_arrow', '==', 'true' ),
-        'desc'    => '自定义颜色，建议使用深色系颜色',
+        'desc'    => '自定義顏色，建議使用深色系顏色',
         'default' => 'rgba(51,51,51,0.8)'
       ),  
 
       array(
         'id'    => 'cover_video',
         'type'  => 'switcher',
-        'title' => '封面视频',
-        'label'   => '开启之后将替代封面随机图片作为主要显示内容',
+        'title' => '封面視頻',
+        'label'   => '開啟之後將替代封面隨機圖片作為主要顯示內容',
         'default' => false
       ),
 
       array(
         'id'    => 'cover_video_loop',
         'type'  => 'switcher',
-        'title' => '封面视频循环',
+        'title' => '封面視頻循環',
         'dependency' => array( 'cover_video', '==', 'true' ),
-        'label'   => '开启之后视频将自动循环，需要开启Pjax功能',
+        'label'   => '開啟之後視頻將自動循環，需要開啟Pjax功能',
         'default' => false
       ),
 
       array(
         'id'     => 'cover_video_link',
         'type'   => 'text',
-        'title'  => '封面视频地址',
+        'title'  => '封面視頻地址',
         'dependency' => array( 'cover_video', '==', 'true' ),
-        'desc'   => '填写地址，该地址拼接下面的视频名，地址尾部不需要加斜杠',
+        'desc'   => '填寫地址，該地址拼接下面的視頻名，地址尾部不需要加斜杠',
       ),
 
       array(
         'id'     => 'cover_video_title',
         'type'   => 'text',
-        'title'  => '封面视频名称',
+        'title'  => '封面視頻名稱',
         'dependency' => array( 'cover_video', '==', 'true' ),
-        'desc'   => '例如：abc.mp4，只需要填写视频文件名abc即可，多个用英文逗号隔开如abc,efg，默认随机播放',
+        'desc'   => '例如：abc.mp4，只需要填寫視頻文件名abc即可，多個用英文逗號隔開如abc,efg，默認隨機播放',
       ),
 
     )
@@ -1279,28 +1279,28 @@ if( class_exists( 'CSF' ) ) {
 
   CSF::createSection( $prefix, array(
     'parent' => 'homepage', 
-    'title'  => '封面社交区域设置',
+    'title'  => '封面社交區域設置',
     'icon'      => 'fa fa-share-square-o',
     'fields' => array(
 
       array(
         'type'    => 'subheading',
-        'content' => '选项',
+        'content' => '選項',
       ),
 
       array(
         'id'    => 'social_area',
         'type'  => 'switcher',
-        'title' => '封面社交区域',
-        'label'   => '默认开启，显示封面随机图片切换按钮和社交网络图标',
+        'title' => '封面社交區域',
+        'label'   => '默認開啟，顯示封面隨機圖片切換按鈕和社交網絡圖標',
         'default' => true
       ),
 
       array(
         'id'          => 'social_display_icon',
         'type'        => 'image_select',
-        'title'       => '社交网络图标',
-        'desc'   => '选择你喜欢的图标包。流畅设计图标由设计师Paradox设计，并授权本主题预置。沐氢图标由设计师缄默设计，并授权本主题预置。',
+        'title'       => '社交網絡圖標',
+        'desc'   => '選擇你喜歡的圖標包。流暢設計圖標由設計師Paradox設計，並授權本主題預置。沐氫圖標由設計師緘默設計，並授權本主題預置。',
         'options'     => array(
           'https://cdn.jsdelivr.net/gh/Fuukei/Public_Repository@latest/vision/display_icon/fluent_design'  => 'https://cdn.jsdelivr.net/gh/Fuukei/Public_Repository@latest/vision/options/display_icon_fd.gif',
           'https://cdn.jsdelivr.net/gh/Fuukei/Public_Repository@latest/vision/display_icon/muh2'  => 'https://cdn.jsdelivr.net/gh/Fuukei/Public_Repository@latest/vision/options/display_icon_h2.gif',
@@ -1321,9 +1321,9 @@ if( class_exists( 'CSF' ) ) {
       array(
         'id'    => 'social_area_radius',
         'type'  => 'slider',
-        'title' => '封面社交区域圆角',
+        'title' => '封面社交區域圓角',
         'dependency' => array( 'social_area', '==', 'true' ),
-        'desc'   => '滑动滑块，推荐数值范围为10-20',
+        'desc'   => '滑動滑塊，推薦數值範圍為10-20',
         'unit'    => 'px',
         'max'   => '30',
         'default' => '15'
@@ -1332,15 +1332,15 @@ if( class_exists( 'CSF' ) ) {
       array(
         'id'    => 'cover_random_graphs_switch',
         'type'  => 'switcher',
-        'title' => '封面随机图片切换按钮',
+        'title' => '封面隨機圖片切換按鈕',
         'dependency' => array( 'social_area', '==', 'true' ),
-        'label'   => '默认开启，显示封面随机图切换按钮',
+        'label'   => '默認開啟，顯示封面隨機圖切換按鈕',
         'default' => true
       ),
 
       array(
         'type'    => 'subheading',
-        'content' => '社交网络',
+        'content' => '社交網絡',
       ),
 
       array(
@@ -1357,23 +1357,23 @@ if( class_exists( 'CSF' ) ) {
         'type'   => 'text',
         'title'  => 'QQ',
         'dependency' => array( 'social_area', '==', 'true' ),
-        'desc'   => '请注意填写格式，例如：tencent://message/?uin=123456',
+        'desc'   => '請注意填寫格式，例如：tencent://message/?uin=123456',
       ),
 
       array(
         'id'     => 'bili',
         'type'   => 'text',
-        'title'  => '哔哩哔哩',
+        'title'  => '嗶哩嗶哩',
         'dependency' => array( 'social_area', '==', 'true' ),
-        'desc'   => '填写地址',
+        'desc'   => '填寫地址',
       ),
 
       array(
         'id'     => 'wangyiyun',
         'type'   => 'text',
-        'title'  => '网易云音乐',
+        'title'  => '網易云音樂',
         'dependency' => array( 'social_area', '==', 'true' ),
-        'desc'   => '填写地址',
+        'desc'   => '填寫地址',
       ),
 
       array(
@@ -1381,7 +1381,7 @@ if( class_exists( 'CSF' ) ) {
         'type'   => 'text',
         'title'  => '新浪微博',
         'dependency' => array( 'social_area', '==', 'true' ),
-        'desc'   => '填写地址',
+        'desc'   => '填寫地址',
       ),
 
       array(
@@ -1389,7 +1389,7 @@ if( class_exists( 'CSF' ) ) {
         'type'   => 'text',
         'title'  => 'Github',
         'dependency' => array( 'social_area', '==', 'true' ),
-        'desc'   => '填写地址',
+        'desc'   => '填寫地址',
       ),
 
       array(
@@ -1397,7 +1397,7 @@ if( class_exists( 'CSF' ) ) {
         'type'   => 'text',
         'title'  => 'Telegram',
         'dependency' => array( 'social_area', '==', 'true' ),
-        'desc'   => '填写地址',
+        'desc'   => '填寫地址',
       ),
 
       array(
@@ -1405,7 +1405,7 @@ if( class_exists( 'CSF' ) ) {
         'type'   => 'text',
         'title'  => 'Steam',
         'dependency' => array( 'social_area', '==', 'true' ),
-        'desc'   => '填写地址',
+        'desc'   => '填寫地址',
       ),
 
       array(
@@ -1413,15 +1413,15 @@ if( class_exists( 'CSF' ) ) {
         'type'   => 'text',
         'title'  => '知乎',
         'dependency' => array( 'social_area', '==', 'true' ),
-        'desc'   => '填写地址',
+        'desc'   => '填寫地址',
       ),
 
       array(
         'id'     => 'qzone',
         'type'   => 'text',
-        'title'  => 'QQ空间',
+        'title'  => 'QQ空間',
         'dependency' => array( 'social_area', '==', 'true' ),
-        'desc'   => '填写地址',
+        'desc'   => '填寫地址',
       ),
 
       array(
@@ -1429,15 +1429,15 @@ if( class_exists( 'CSF' ) ) {
         'type'   => 'text',
         'title'  => 'Lofter',
         'dependency' => array( 'social_area', '==', 'true' ),
-        'desc'   => '填写地址',
+        'desc'   => '填寫地址',
       ),
 
       array(
         'id'     => 'youku',
         'type'   => 'text',
-        'title'  => '优酷视频',
+        'title'  => '優酷視頻',
         'dependency' => array( 'social_area', '==', 'true' ),
-        'desc'   => '填写地址',
+        'desc'   => '填寫地址',
       ),
 
       array(
@@ -1445,7 +1445,7 @@ if( class_exists( 'CSF' ) ) {
         'type'   => 'text',
         'title'  => 'Linkedin',
         'dependency' => array( 'social_area', '==', 'true' ),
-        'desc'   => '填写地址',
+        'desc'   => '填寫地址',
       ),
 
       array(
@@ -1453,15 +1453,15 @@ if( class_exists( 'CSF' ) ) {
         'type'   => 'text',
         'title'  => '推特',
         'dependency' => array( 'social_area', '==', 'true' ),
-        'desc'   => '填写地址',
+        'desc'   => '填寫地址',
       ),
 
       array(
         'id'     => 'facebook',
         'type'   => 'text',
-        'title'  => '脸书',
+        'title'  => '臉書',
         'dependency' => array( 'social_area', '==', 'true' ),
-        'desc'   => '填写地址',
+        'desc'   => '填寫地址',
       ),
 
       array(
@@ -1469,29 +1469,29 @@ if( class_exists( 'CSF' ) ) {
         'type'   => 'text',
         'title'  => 'CSDN',
         'dependency' => array( 'social_area', '==', 'true' ),
-        'desc'   => '填写地址',
+        'desc'   => '填寫地址',
       ),
 
       array(
         'id'     => 'jianshu',
         'type'   => 'text',
-        'title'  => '简书',
+        'title'  => '簡書',
         'dependency' => array( 'social_area', '==', 'true' ),
-        'desc'   => '填写地址',
+        'desc'   => '填寫地址',
       ),
 
       array(
         'id'     => 'socialdiy1',
         'type'   => 'text',
-        'title'  => '自定义社交网络Ⅰ',
+        'title'  => '自定義社交網絡Ⅰ',
         'dependency' => array( 'social_area', '==', 'true' ),
-        'desc'   => '填写地址',
+        'desc'   => '填寫地址',
       ),
 
       array(
         'id'     => 'socialdiyp1',
         'type'  => 'upload',
-        'title' => '自定义社交网络Ⅰ图标',
+        'title' => '自定義社交網絡Ⅰ圖標',
         'dependency' => array( 'social_area', '==', 'true' ),
         'desc'   => '最佳比例1比1',
         'library'      => 'image',
@@ -1500,15 +1500,15 @@ if( class_exists( 'CSF' ) ) {
       array(
         'id'     => 'socialdiy2',
         'type'   => 'text',
-        'title'  => '自定义社交网络Ⅱ',
+        'title'  => '自定義社交網絡Ⅱ',
         'dependency' => array( 'social_area', '==', 'true' ),
-        'desc'   => '填写地址',
+        'desc'   => '填寫地址',
       ),
 
       array(
         'id'     => 'socialdiyp2',
         'type'  => 'upload',
-        'title' => '自定义社交网络Ⅱ图标',
+        'title' => '自定義社交網絡Ⅱ圖標',
         'dependency' => array( 'social_area', '==', 'true' ),
         'desc'   => '最佳比例1比1',
         'library'      => 'image',
@@ -1517,15 +1517,15 @@ if( class_exists( 'CSF' ) ) {
       array(
         'id'     => 'email_name',
         'type'   => 'text',
-        'title'  => '邮箱用户名',
+        'title'  => '郵箱用戶名',
         'dependency' => array( 'social_area', '==', 'true' ),
-        'desc'   => 'name@domain.com的name部分，前端仅具有 js 运行环境时才能获取完整地址，可放心填写',
+        'desc'   => 'name@domain.com的name部分，前端僅具有 js 運行環境時才能獲取完整地址，可放心填寫',
       ),
 
       array(
         'id'     => 'email_domain',
         'type'   => 'text',
-        'title'  => '邮箱用户名',
+        'title'  => '郵箱用戶名',
         'dependency' => array( 'social_area', '==', 'true' ),
         'desc'   => 'name@domain.com的domain.com部分',
       ),
@@ -1535,49 +1535,49 @@ if( class_exists( 'CSF' ) ) {
 
   CSF::createSection( $prefix, array(
     'parent' => 'homepage', 
-    'title'  => '公告栏和区域标题设置',
+    'title'  => '公告欄和區域標題設置',
     'icon'      => 'fa fa-bullhorn',
     'fields' => array(
 
       array(
         'type'    => 'subheading',
-        'content' => '公告栏',
+        'content' => '公告欄',
       ),
 
       array(
         'id'    => 'announce_bar',
         'type'  => 'switcher',
-        'title' => '公告栏',
-        'label'   => '开启之后公告栏将在首页封面下方显示',
+        'title' => '公告欄',
+        'label'   => '開啟之後公告欄將在首頁封面下方顯示',
         'default' => false
       ),
 
       array(
         'id'         => 'announce_bar_style',
         'type'       => 'radio',
-        'title'      => '公告栏样式',
+        'title'      => '公告欄樣式',
         'dependency' => array( 'announce_bar', '==', 'true' ),
         'options'    => array(
-          'picture' => '图片背景',
-          'pure' => '纯色背景',
+          'picture' => '圖片背景',
+          'pure' => '純色背景',
         ),
       ),
 
       array(
         'id'    => 'announce_bar_icon',
         'type'  => 'switcher',
-        'title' => '公告栏“广播”图标',
+        'title' => '公告欄“廣播”圖標',
         'dependency' => array( 'announce_bar', '==', 'true' ),
-        'label'   => '“广播”图标将显示在公告栏的左侧',
+        'label'   => '“廣播”圖標將顯示在公告欄的左側',
         'default' => true
       ),
 
       array(
         'id'     => 'announcement_bg',
         'type'  => 'upload',
-        'title' => '公告栏背景',
+        'title' => '公告欄背景',
         'dependency' => array( 'announce_bar_style', '==', 'picture' ),
-        'desc'   => '最佳宽度820px，最佳高度67px',
+        'desc'   => '最佳寬度820px，最佳高度67px',
         'library'      => 'image',
         'default' => 'https://cdn.jsdelivr.net/gh/Fuukei/Public_Repository@latest/vision/ultramarine/announcement_bg.jpg'
       ),
@@ -1585,9 +1585,9 @@ if( class_exists( 'CSF' ) ) {
       array(
         'id'      => 'announce_bar_border_color',
         'type'    => 'color',
-        'title'   => '公告栏边框颜色',
+        'title'   => '公告欄邊框顏色',
         'dependency' => array( 'announce_bar_style', '==', 'pure' ),
-        'desc'    => '自定义颜色，建议使用与主题色相同色系且属于浅色系的颜色',
+        'desc'    => '自定義顏色，建議使用與主題色相同色系且屬於淺色系的顏色',
         'default' => '#E6E6E6'
       ),
 
@@ -1596,13 +1596,13 @@ if( class_exists( 'CSF' ) ) {
         'type'   => 'text',
         'title'  => '公告文本',
         'dependency' => array( 'announce_bar', '==', 'true' ),
-        'desc'   => '填写公告文本，文本超出142个字节将会被滚动显示',
+        'desc'   => '填寫公告文本，文本超出142個字節將會被滾動顯示',
       ),
 
       array(
         'id'          => 'announce_text_align',
         'type'        => 'image_select',
-        'title'       => '公告文本对齐方向',
+        'title'       => '公告文本對齊方向',
         'dependency' => array( 'announce_bar', '==', 'true' ),
         'options'     => array(
           'left'  => 'https://cdn.jsdelivr.net/gh/Fuukei/Public_Repository@latest/vision/options/announce_text_left.png',
@@ -1615,45 +1615,45 @@ if( class_exists( 'CSF' ) ) {
       array(
         'id'      => 'announce_text_color',
         'type'    => 'color',
-        'title'   => '公告文本颜色',
+        'title'   => '公告文本顏色',
         'dependency' => array( 'announce_bar', '==', 'true' ),
-        'desc'    => '自定义颜色，建议根据背景颜色搭配合适的颜色',
+        'desc'    => '自定義顏色，建議根據背景顏色搭配合適的顏色',
         'default' => '#999'
       ),    
 
       array(
         'type'    => 'subheading',
-        'content' => '区域标题',
+        'content' => '區域標題',
       ),
 
       array(
         'id'     => 'exhibition_area_title',
         'type'   => 'text',
-        'title'  => '展示区域标题',
-        'desc'   => '默认为“展示”，你可以修改为其他，当然不能当广告用！不允许！！',
+        'title'  => '展示區域標題',
+        'desc'   => '默認為“展示”，你可以修改為其他，當然不能當廣告用！不允許！！',
         'default' => '展示'
       ),
 
       array(
         'id'     => 'post_area_title',
         'type'   => 'text',
-        'title'  => '文章区域标题',
-        'desc'   => '默认为“文章”，你可以修改为其他，当然不能当广告用！不允许！！',
+        'title'  => '文章區域標題',
+        'desc'   => '默認為“文章”，你可以修改為其他，當然不能當廣告用！不允許！！',
         'default' => '文章'
       ),
 
       array(
         'id'     => 'area_title_font',
         'type'   => 'text',
-        'title'  => '区域标题字体',
-        'desc'   => '填写字体名称。例如：Ma Shan Zheng',
+        'title'  => '區域標題字',
+        'desc'   => '填寫字體名稱。例如：Ma Shan Zheng',
         'default' => 'Noto Serif SC'
       ),
 
       array(
         'id'          => 'area_title_text_align',
         'type'        => 'image_select',
-        'title'       => '区域标题对齐方向',
+        'title'       => '區域標題對齊方向',
         'options'     => array(
           'left'  => 'https://cdn.jsdelivr.net/gh/Fuukei/Public_Repository@latest/vision/options/area_title_text_left.png',
           'right'  => 'https://cdn.jsdelivr.net/gh/Fuukei/Public_Repository@latest/vision/options/area_title_text_right.png',
@@ -1665,8 +1665,8 @@ if( class_exists( 'CSF' ) ) {
       array(
         'id'      => 'area_title_bottom_color',
         'type'    => 'color',
-        'title'   => '区域标题下分隔线颜色',
-        'desc'    => '自定义颜色，建议使用与主题色相同色系且属于浅色系的颜色',
+        'title'   => '區域標題下分隔線顏色',
+        'desc'    => '自定義顏色，建議使用與主題色相同色系且屬於淺色系的顏色',
         'default' => '#e8e8e8'
       ),  
 
@@ -1675,22 +1675,22 @@ if( class_exists( 'CSF' ) ) {
 
   CSF::createSection( $prefix, array(
     'parent' => 'homepage', 
-    'title'  => '展示区域设置',
+    'title'  => '展示區域設置',
     'icon'      => 'fa fa-bookmark',
     'fields' => array(
 
       array(
         'id'    => 'exhibition_area',
         'type'  => 'switcher',
-        'title' => '展示区域',
-        'label'   => '默认开启，展示区域显示在文章区域上方',
+        'title' => '展示區域',
+        'label'   => '默認開啟，展示區域顯示在文章區域上方',
         'default' => true
       ),
 
       array(
         'id'         => 'exhibition_area_style',
         'type'       => 'image_select',
-        'title'      => '展示区域样式',
+        'title'      => '展示區域樣式',
         'options'    => array(
           'left_and_right' => 'https://cdn.jsdelivr.net/gh/Fuukei/Public_Repository@latest/vision/options/exhibition_area_style_lr.png',
           'bottom_to_top' => 'https://cdn.jsdelivr.net/gh/Fuukei/Public_Repository@latest/vision/options/exhibition_area_style_ud.png',
@@ -1701,26 +1701,26 @@ if( class_exists( 'CSF' ) ) {
       array(
         'id'    => 'exhibition_area_compat',
         'type'  => 'switcher',
-        'title' => '展示区域兼容模式',
+        'title' => '展示區域兼容模式',
         'dependency' => array( 'exhibition_area_style', '==', 'left_and_right' ),
-        'label'   => '默认开启，此选项避免了展示区域错位的问题',
+        'label'   => '默認開啟，此選項避免了展示區域錯位的問題',
         'default' => true
       ),
 
       array(
         'id'      => 'exhibition_background_color',
         'type'    => 'color',
-        'title'   => '展示区域背景颜色',
+        'title'   => '展示區域背景顏色',
         'dependency' => array( 'exhibition_area_style', '==', 'left_and_right' ),
-        'desc'    => '自定义颜色，建议使用浅色系颜色',
+        'desc'    => '自定義顏色，建議使用淺色系顏色',
         'default' => 'rgba(255,255,255,0.4)'
       ),
       
       array(
         'id'    => 'exhibition_radius',
         'type'  => 'slider',
-        'title' => '展示区域圆角',
-        'desc'   => '滑动滑块，推荐数值为15',
+        'title' => '展示區域圓角',
+        'desc'   => '滑動滑塊，推薦數值為15',
         'unit'    => 'px',
         'default' => '15'
       ),
@@ -1728,21 +1728,21 @@ if( class_exists( 'CSF' ) ) {
       array(
         'id'            => 'exhibition',
         'type'          => 'tabbed',
-        'title'         => '展示区域设置',
+        'title'         => '展示區域設置',
         'tabs'          => array(
           array(
-            'title'     => '第一展示区域',
+            'title'     => '第一展示區域',
             'fields'    => array(
               array(
                 'id'    => 'img1',
                 'type'  => 'upload',
-                'title' => '图片',
-                'desc'  => '最佳宽度260px，最佳高度160px',
+                'title' => '圖片',
+                'desc'  => '最佳寬度260px，最佳高度160px',
               ),
               array(
                 'id'    => 'title1',
                 'type'  => 'text',
-                'title' => '标题',
+                'title' => '標題',
               ),
               array(
                 'id'    => 'description1',
@@ -1757,18 +1757,18 @@ if( class_exists( 'CSF' ) ) {
             )
           ),
           array(
-            'title'     => '第二展示区域',
+            'title'     => '第二展示區域',
             'fields'    => array(
               array(
                 'id'    => 'img2',
                 'type'  => 'upload',
-                'title' => '图片',
-                'desc'  => '最佳宽度260px，最佳高度160px',
+                'title' => '圖片',
+                'desc'  => '最佳寬度260px，最佳高度160px',
               ),
               array(
                 'id'    => 'title2',
                 'type'  => 'text',
-                'title' => '标题',
+                'title' => '標題',
               ),
               array(
                 'id'    => 'description2',
@@ -1783,18 +1783,18 @@ if( class_exists( 'CSF' ) ) {
             )
           ),
           array(
-            'title'     => '第三展示区域',
+            'title'     => '第三展示區域',
             'fields'    => array(
               array(
                 'id'    => 'img3',
                 'type'  => 'upload',
-                'title' => '图片',
-                'desc'    => '最佳宽度260px，最佳高度160px',
+                'title' => '圖片',
+                'desc'    => '最佳寬度260px，最佳高度160px',
               ),
               array(
                 'id'    => 'title3',
                 'type'  => 'text',
-                'title' => '标题',
+                'title' => '標題',
               ),
               array(
                 'id'    => 'description3',
@@ -1827,14 +1827,14 @@ if( class_exists( 'CSF' ) ) {
 
   CSF::createSection( $prefix, array(
     'parent' => 'homepage', 
-    'title'  => '文章区域设置',
+    'title'  => '文章區域設置',
     'icon'      => 'fa fa-book',
     'fields' => array(
 
       array(
         'id'         => 'post_list_style',
         'type'       => 'image_select',
-        'title'      => '文章区域展示样式',
+        'title'      => '文章區域展示樣式',
         'options'    => array(
           'imageflow' => 'https://cdn.jsdelivr.net/gh/Fuukei/Public_Repository@latest/vision/options/post_list_style_sakura_left.png',
           'akinastyle' => 'https://cdn.jsdelivr.net/gh/Fuukei/Public_Repository@latest/vision/options/post_list_style_akina.png',
@@ -1845,9 +1845,9 @@ if( class_exists( 'CSF' ) ) {
       array(
         'id'         => 'post_list_akina_type',
         'type'       => 'image_select',
-        'title'      => '文章区域装饰特色图片展示形状',
+        'title'      => '文章區域裝飾特色圖片展示形狀',
         'dependency' => array( 'post_list_style', '==', 'akinastyle' ),
-        'desc'   => '你可以选择圆形展示或者矩形展示文章区域装饰特色图片',
+        'desc'   => '你可以選擇圓形展示或者矩形展示文章區域裝飾特色圖片',
         'options'    => array(
           'round' => 'https://cdn.jsdelivr.net/gh/Fuukei/Public_Repository@latest/vision/options/post_list_style_akina.png',
           'square' => 'https://cdn.jsdelivr.net/gh/Fuukei/Public_Repository@latest/vision/options/post_list_style_akina2.png',
@@ -1858,9 +1858,9 @@ if( class_exists( 'CSF' ) ) {
       array(
         'id'          => 'post_list_image_align',
         'type'        => 'image_select',
-        'title'       => '文章区域装饰特色图片对齐方向',
+        'title'       => '文章區域裝飾特色圖片對齊方向',
         'dependency' => array( 'post_list_style', '==', 'imageflow' ),
-        'desc'   => '你可以选择不同方向展示文章区域装饰特色图片',
+        'desc'   => '你可以選擇不同方向展示文章區域裝飾特色圖片',
         'options'     => array(
           'alternate'  => 'https://cdn.jsdelivr.net/gh/Fuukei/Public_Repository@latest/vision/options/post_list_style_sakura1.png',
           'left'  => 'https://cdn.jsdelivr.net/gh/Fuukei/Public_Repository@latest/vision/options/post_list_style_sakura2.png',
@@ -1872,10 +1872,10 @@ if( class_exists( 'CSF' ) ) {
       array(
         'id'         => 'post_cover_options',
         'type'       => 'radio',
-        'title'      => '文章区域装饰特色图片选项',
+        'title'      => '文章區域裝飾特色圖片選項',
         'options'    => array(
-          'type_1' => '封面随机图片',
-          'type_2' => '外部API随机图片',
+          'type_1' => '封面隨機圖片',
+          'type_2' => '外部API隨機圖片',
         ),
         'default'    => 'type_1'
       ),
@@ -1883,16 +1883,16 @@ if( class_exists( 'CSF' ) ) {
       array(
         'id'     => 'post_cover',
         'type'   => 'text',
-        'title'  => '文章区域装饰特色图片外部API随机图片地址',
+        'title'  => '文章區域裝飾特色圖片外部API隨機圖片地址',
         'dependency' => array( 'post_cover_options', '==', 'type_2' ),
-        'desc'   => '填写地址',
+        'desc'   => '填寫地址',
       ),
 
       array(
         'id'     => 'post_title_font_size',
         'type'   => 'slider',
-        'title'  => '文章区域标题字体大小',
-        'desc'   => '滑动滑块，推荐数值范围为16-20',
+        'title'  => '文章區域標題字體大小',
+        'desc'   => '滑動滑塊，推薦數值範圍為16-20',
         'dependency' => array( 'post_list_style', '==', 'imageflow' ),
         'unit'    => 'px',
         'step'   => '1',
@@ -1904,27 +1904,27 @@ if( class_exists( 'CSF' ) ) {
       array(
         'id'      => 'post_date_background_color',
         'type'    => 'color',
-        'title'   => '文章区域时间提示区域背景颜色',
+        'title'   => '文章區域時間提示區域背景顏色',
         'dependency' => array( 'post_list_style', '==', 'imageflow' ),
-        'desc'    => '自定义颜色，建议使用与主题色搭配色相同色系且属于浅色系的颜色',
+        'desc'    => '自定義顏色，建議使用與主題色搭配色相同色系且屬於淺色系的顏色',
         'default' => '#fff5e0'
       ),    
 
       array(
         'id'      => 'post_date_text_color',
         'type'    => 'color',
-        'title'   => '文章区域时间提示区域文本颜色',
+        'title'   => '文章區域時間提示區域文本顏色',
         'dependency' => array( 'post_list_style', '==', 'imageflow' ),
-        'desc'    => '自定义颜色，建议使用与主题色搭配色相同色系的颜色',
+        'desc'    => '自定義顏色，建議使用與主題色搭配色相同色系的顏色',
         'default' => '#ffcc00'
       ),    
 
       array(
         'id'     => 'post_date_font_size',
         'type'   => 'slider',
-        'title'  => '文章区域时间提示区域字体大小',
+        'title'  => '文章區域時間提示區域字體大小',
         'dependency' => array( 'post_list_style', '==', 'imageflow' ),
-        'desc'   => '滑动滑块，推荐数值范围为10-14',
+        'desc'   => '滑動滑塊，推薦數值範圍為10-14',
         'unit'    => 'px',
         'step'   => '1',
         'min'   => '6',
@@ -1935,26 +1935,26 @@ if( class_exists( 'CSF' ) ) {
       array(
         'id'    => 'post_icon_more',
         'type'  => 'switcher',
-        'title' => '文章区域“详细”图标',
-        'label'   => '开启之后“详细”图标将显示在文章区域内下方',
+        'title' => '文章區域“詳細”圖標',
+        'label'   => '開啟之後“詳細”圖標將顯示在文章區域內下方',
         'default' => false
       ),
 
       array(
         'id'      => 'post_icon_color',
         'type'    => 'color',
-        'title'   => '文章区域图标颜色',
+        'title'   => '文章區域圖標顏色',
         'dependency' => array( 'post_list_style', '==', 'imageflow' ),
-        'desc'    => '自定义颜色，建议使用与主题色搭配色相同色系的颜色',
+        'desc'    => '自定義顏色，建議使用與主題色搭配色相同色系的顏色',
         'default' => '#ffcc00'
       ),    
 
       array(
         'id'      => 'post_border_shadow_color',
         'type'    => 'color',
-        'title'   => '文章区域边框阴影颜色',
+        'title'   => '文章區域邊框陰影顏色',
         'dependency' => array( 'post_list_style', '==', 'imageflow' ),
-        'desc'    => '自定义颜色，建议使用与主题色相同色系且属于浅色系的颜色',
+        'desc'    => '自定義顏色，建議使用與主題色相同色系且屬於淺色系的顏色',
         'default' => '#e8e8e8'
       ),    
 
@@ -1963,20 +1963,20 @@ if( class_exists( 'CSF' ) ) {
 
   CSF::createSection( $prefix, array(
     'id'    => 'page', 
-    'title' => '页面设置',
+    'title' => '頁面設置',
     'icon'      => 'fa fa-file-text',
   ) );
 
   CSF::createSection( $prefix, array(
     'parent' => 'page', 
-    'title'  => '综合设置',
+    'title'  => '綜合設置',
     'icon'      => 'fa fa-compass',
     'fields' => array(
 
       array(
         'id'         => 'page_style',
         'type'       => 'image_select',
-        'title'      => '页面样式',
+        'title'      => '頁面樣式',
         'options'    => array(
           'sakurairo' => 'https://cdn.jsdelivr.net/gh/Fuukei/Public_Repository@latest/vision/options/page_style_iro.png',
           'sakura' => 'https://cdn.jsdelivr.net/gh/Fuukei/Public_Repository@latest/vision/options/page_style_sakura.png',
@@ -1987,10 +1987,10 @@ if( class_exists( 'CSF' ) ) {
       array(
         'id'         => 'entry_content_style',
         'type'       => 'radio',
-        'title'      => '页面排版样式',
+        'title'      => '頁面排版樣式',
         'options'    => array(
-          'sakurairo' => '默认样式',
-          'github' => 'Github样式',
+          'sakurairo' => '默認樣式',
+          'github' => 'Github樣式',
         ),
         'default'    => 'sakurairo'
       ),
@@ -1998,25 +1998,25 @@ if( class_exists( 'CSF' ) ) {
       array(
         'id'    => 'patternimg',
         'type'  => 'switcher',
-        'title' => '页面装饰图片',
-        'label'   => '默认开启，显示在文章页面，独立页面和分类页',
+        'title' => '頁面裝飾圖片',
+        'label'   => '默認開啟，顯示在文章頁面，獨立頁面和分類頁',
         'default' => true
       ),
 
       array(
         'id'    => 'page_title_animation',
         'type'  => 'switcher',
-        'title' => '页面标题动画',
-        'label'   => '开启之后页面标题将有浮入动画',
+        'title' => '頁面標題動畫',
+        'label'   => '開啟之後頁面標題將有浮入動畫',
         'default' => true
       ),
 
       array(
         'id'     => 'page_title_animation_time',
         'type'   => 'slider',
-        'title'  => '页面标题动画时间',
+        'title'  => '頁面標題動畫時間',
         'dependency' => array( 'page_title_animation', '==', 'true' ),
-        'desc'   => '滑动滑块，推荐数值范围为1-2',
+        'desc'   => '滑動滑塊，推薦數值範圍為1-2',
         'step'   => '0.01',
         'unit'    => 's',
         'max'   => '5',
@@ -2026,8 +2026,8 @@ if( class_exists( 'CSF' ) ) {
       array(
         'id'     => 'page_title_font_size',
         'type'   => 'slider',
-        'title'  => '页面标题字体大小',
-        'desc'   => '滑动滑块，推荐数值范围为20-30',
+        'title'  => '頁面標題字體大小',
+        'desc'   => '滑動滑塊，推薦數值範圍為20-30',
         'unit'    => 'px',
         'min'   => '5',
         'max'   => '50',
@@ -2037,33 +2037,33 @@ if( class_exists( 'CSF' ) ) {
       array(
         'id'    => 'clipboard_copyright',
         'type'  => 'switcher',
-        'title' => '页面剪切板版权提示',
-        'label'   => '默认开启，用户在复制文字内容超过30字节时，会有版权提示文本',
+        'title' => '頁面剪切板版權提示',
+        'label'   => '默認開啟，用戶在復製文字內容超過30字節時，會有版權提示文本',
         'default' => true
       ),
 
       array(
         'id'    => 'page_lazyload',
         'type'  => 'switcher',
-        'title' => '页面LazyLoad加载',
-        'label'   => '默认开启，页面图片会有LazyLoad加载效果',
+        'title' => '頁面LazyLoad加載',
+        'label'   => '默認開啟，頁面圖片會有LazyLoad加載效果',
         'default' => true
       ),
 
       array(
         'id'     => 'page_lazyload_spinner',
         'type'   => 'text',
-        'title'  => '页面LazyLoad加载占位SVG',
+        'title'  => '頁面LazyLoad加載佔位SVG',
         'dependency' => array( 'page_lazyload', '==', 'true' ),
-        'desc'   => '填写地址，此为页面LazyLoad加载时会显示的占位图',
+        'desc'   => '填寫地址，此為頁面LazyLoad加載時會顯示的佔位圖',
         'default'    => 'https://cdn.jsdelivr.net/gh/Fuukei/Public_Repository@latest/vision/load_svg/inload.svg'
       ),
 
       array(
         'id'     => 'load_in_svg',
         'type'   => 'text',
-        'title'  => '页面图像加载占位SVG',
-        'desc'   => '填写地址，此为加载页面图像时占位显示的SVG',
+        'title'  => '頁面圖像加載佔位SVG',
+        'desc'   => '填寫地址，此為加載頁面圖像時佔位顯示的SVG',
         'default' => 'https://cdn.jsdelivr.net/gh/Fuukei/Public_Repository@latest/vision/load_svg/inload.svg'
       ),
 
@@ -2072,64 +2072,64 @@ if( class_exists( 'CSF' ) ) {
 
   CSF::createSection( $prefix, array(
     'parent' => 'page', 
-    'title'  => '文章页面设置',
+    'title'  => '文章頁面設置',
     'icon'      => 'fa fa-archive',
     'fields' => array(
 
       array(
         'id'    => 'article_title_line',
         'type'  => 'switcher',
-        'title' => '文章页面标题下划线动画',
-        'label'   => '开启且文章设置了特色图片之后，文章标题将有下划线动画',
+        'title' => '文章頁面標題下劃線動畫',
+        'label'   => '開啟且文章設置了特色圖片之後，文章標題將有下劃線動畫',
         'default' => false
       ),
 
       array(
         'id'    => 'article_nextpre',
         'type'  => 'switcher',
-        'title' => '文章页面上下文章切换',
-        'label'   => '开启之后文章页面将出现上下文章切换',
+        'title' => '文章頁面上下文章切換',
+        'label'   => '開啟之後文章頁面將出現上下文章切換',
         'default' => false
       ),
 
       array(
         'id'    => 'article_lincenses',
         'type'  => 'switcher',
-        'title' => '文章页面版权提示和标签',
-        'label'   => '开启之后文章页面将出现版权提示和标签',
+        'title' => '文章頁面版權提示和標籤',
+        'label'   => '開啟之後文章頁面將出現版權提示和標籤',
         'default' => false
       ),
 
       array(
         'id'    => 'author_profile',
         'type'  => 'switcher',
-        'title' => '文章页面作者信息',
-        'label'   => '开启之后文章页面将出现作者信息',
+        'title' => '文章頁面作者信息',
+        'label'   => '開啟之後文章頁面將出現作者信息',
         'default' => false
       ),
 
       array(
         'id'     => 'author_profile_text',
         'type'   => 'text',
-        'title'  => '文章页面作者信息签名栏文本',
+        'title'  => '文章頁面作者信息簽名欄文本',
         'dependency' => array( 'author_profile', '==', 'true' ),
-        'desc'   => '一段自我描述的话',
-        'default'    => '本当の声を響かせてよ'
+        'desc'   => '一段自我描述的話',
+        'default'    => '本當の聲を響かせてよ'
       ),
 
       array(
         'id'    => 'alipay_code',
         'type'  => 'upload',
-        'title' => '文章页面赞赏按钮支付宝二维码',
-        'desc'   => '上传支付宝收款码图片',
+        'title' => '文章頁面讚賞按鈕支付寶二維碼',
+        'desc'   => '上傳支付寶收款碼圖片',
         'library'      => 'image',
       ),
 
       array(
         'id'    => 'wechat_code',
         'type'  => 'upload',
-        'title' => '文章页面赞赏按钮微信二维码',
-        'desc'   => '上传微信收款码图片',
+        'title' => '文章頁面讚賞按鈕微信二維碼',
+        'desc'   => '上傳微信收款碼圖片',
         'library'      => 'image',
       ),
 
@@ -2138,30 +2138,30 @@ if( class_exists( 'CSF' ) ) {
 
   CSF::createSection( $prefix, array(
     'parent' => 'page', 
-    'title'  => '模板页面设置',
+    'title'  => '模板頁面設置',
     'icon'      => 'fa fa-window-maximize',
     'fields' => array(
 
       array(
         'id'     => 'bilibili_id',
         'type'   => 'text',
-        'title'  => '哔哩哔哩追番模板帐号ID',
-        'desc'   => '填写你的帐号ID，例如：https://space.bilibili.com/13972644/，只需填写数字“13972644”部分',
+        'title'  => '哔嗶哩嗶哩追番模板帳號ID',
+        'desc'   => '填寫你的帳號ID，例如：https://space.bilibili.com/13972644/，只需填寫數字“13972644”部分',
         'default'    => '13972644'
       ),
 
       array(
         'id'     => 'bilibili_cookie',
         'type'   => 'text',
-        'title'  => '哔哩哔哩追番模板帐号Cookies',
-        'desc'   => '填写你的帐号Cookies，F12打开浏览器网络面板，前往你的B站主页获取Cookies。如果留空，将不会显示追番进度',
+        'title'  => '嗶哩嗶哩追番模板帳號Cookies',
+        'desc'   => '填寫你的帳號Cookies，F12打開瀏覽器網絡面板，前往你的B站主頁獲取Cookies。如果留空，將不會顯示追番進度',
         'default'    => 'LIVE_BUVID='
       ),
 
       array(
         'id'          => 'friend_link_align',
         'type'        => 'image_select',
-        'title'       => '友情链接模板单元对齐方向',
+        'title'       => '友情鏈接模板單元對齊方向',
         'options'     => array(
           'left'  => 'https://cdn.jsdelivr.net/gh/Fuukei/Public_Repository@latest/vision/options/friend_link_left.png',
           'right'  => 'https://cdn.jsdelivr.net/gh/Fuukei/Public_Repository@latest/vision/options/friend_link_right.png',
@@ -2173,16 +2173,16 @@ if( class_exists( 'CSF' ) ) {
       array(
         'id'     => 'ex_register_open',
         'type'   => 'switcher',
-        'title'  => '登录模板注册功能',
-        'label'   => '开启之后登录模板将允许注册',
+        'title'  => '登錄模板註冊功能',
+        'label'   => '開啟之後登錄模板將允許註冊',
         'default' => false
       ),
 
       array(
         'id'     => 'registration_validation',
         'type'   => 'switcher',
-        'title'  => '登录模板注册滑动验证',
-        'label'   => '开启之后登录模板注册需要经过滑动验证',
+        'title'  => '登錄模板註冊滑動驗證',
+        'label'   => '開啟之後登錄模板註冊需要經過滑動驗證',
         'default' => false
       ),
 
@@ -2191,18 +2191,18 @@ if( class_exists( 'CSF' ) ) {
 
   CSF::createSection( $prefix, array(
     'parent' => 'page', 
-    'title'  => '评论相关设置',
+    'title'  => '評論相關設置',
     'icon'      => 'fa fa-comments-o',
     'fields' => array(
 
       array(
         'id'         => 'comment_area',
         'type'       => 'radio',
-        'title'      => '页面评论区域显示',
-        'desc'    => '你可以选择展开显示或者收缩显示评论区域内容',
+        'title'      => '頁面評論區域顯示',
+        'desc'    => '你可以選擇展開顯示或者收縮顯示評論區域內容',
         'options'    => array(
-          'unfold' => '展开显示',
-          'fold' => '收缩显示',
+          'unfold' => '展開顯示',
+          'fold' => '收縮顯示',
         ),
         'default'    => 'unfold'
       ),
@@ -2210,60 +2210,60 @@ if( class_exists( 'CSF' ) ) {
       array(
         'id'     => 'comment_smile_bilibili',
         'type'   => 'switcher',
-        'title'  => '页面评论区域哔哩哔哩表情包',
-        'label'   => '默认开启，哔哩哔哩表情包显示在评论框的下方',
+        'title'  => '頁面評論區域嗶哩嗶哩表情包',
+        'label'   => '默認開啟，嗶哩嗶哩表情包顯示在評論框的下方',
         'default' => true
       ),
 
       array(
         'id'    => 'comment_area_image',
         'type'  => 'upload',
-        'title' => '页面评论区域右下背景图片',
-        'desc'   => '如果此选项为空白，则没有图像，无最佳推荐',
+        'title' => '頁面評論區域右下背景圖片',
+        'desc'   => '如果此選項為空白，則沒有圖像，無最佳推薦',
         'library'      => 'image',
       ),
 
       array(
         'id'     => 'comment_useragent',
         'type'   => 'switcher',
-        'title'  => '页面评论区域UA信息',
-        'label'   => '开启之后页面评论区域将显示用户的浏览器，操作系统信息',
+        'title'  => '頁面評論區域UA信息',
+        'label'   => '開啟之後頁面評論區域將顯示用戶的瀏覽器，操作系統信息',
         'default' => false
       ),
 
       array(
         'id'     => 'comment_location',
         'type'   => 'switcher',
-        'title'  => '页面评论区域位置信息',
-        'label'   => '开启之后页面评论区域将显示用户的位置信息',
+        'title'  => '頁面評論區域位置信息',
+        'label'   => '開啟之後頁面評論區域將顯示用戶的位置信息',
         'default' => false
       ),
 
       array(
         'id'     => 'comment_private_message',
         'type'   => 'switcher',
-        'title'  => '私人评论功能',
-        'label'   => '开启之后将允许用户设置自己的评论对其他人不可见',
+        'title'  => '私人評論功能',
+        'label'   => '開啟之後將允許用戶設置自己的評論對其他人不可見',
         'default' => false
       ),
 
       array(
         'id'     => 'not_robot',
         'type'   => 'switcher',
-        'title'  => '页面评论区域机器人验证',
-        'label'   => '开启之后用户评论前需要经过验证后才可发布',
+        'title'  => '頁面評論區域機器人驗證',
+        'label'   => '開啟之後用戶評論前需要經過驗證後才可發布',
         'default' => false
       ),
 
       array(
         'id'          => 'qq_avatar_link',
         'type'        => 'select',
-        'title'       => 'QQ头像链接加密',
+        'title'       => 'QQ頭像鏈接加密',
         'options'     => array(
-          'off'  => '关闭',
+          'off'  => '關閉',
           'type_1'  => '重定向（低安全性）',
-          'type_2'  => '后端获取头像数据（中安全性）',
-          'type_3'  => '后端解析头像接口（高安全性，慢速）',
+          'type_2'  => '後端獲取頭像數據（中安全性）',
+          'type_3'  => '後端解析頭像接口（高安全性，慢速）',
         ),
         'default'     => 'off'
       ),
@@ -2271,9 +2271,9 @@ if( class_exists( 'CSF' ) ) {
       array(
         'id'          => 'img_upload_api',
         'type'        => 'select',
-        'title'       => '页面评论区域上传图片接口',
+        'title'       => '頁面評論區域上傳圖片接口',
         'options'     => array(
-          'off'  => '关闭',
+          'off'  => '關閉',
           'imgur'  => 'Imgur (https://imgur.com)',
           'smms'  => 'SM.MS (https://sm.ms)',
           'chevereto'  => 'Chevereto (https://chevereto.com)',
@@ -2286,15 +2286,15 @@ if( class_exists( 'CSF' ) ) {
         'type'   => 'text',
         'title'  => 'Imgur Client ID',
         'dependency' => array( 'img_upload_api', '==', 'imgur' ),
-        'desc'   => '此处填写Client ID，注册请访问 https://api.imgur.com/oauth2/addclient ',
+        'desc'   => '此處填寫Client ID，註冊請訪問 https://api.imgur.com/oauth2/addclient ',
       ),
 
       array(
         'id'     => 'imgur_upload_image_proxy',
         'type'   => 'text',
-        'title'  => 'Imgur上传代理',
+        'title'  => 'Imgur上傳代理',
         'dependency' => array( 'img_upload_api', '==', 'imgur' ),
-        'desc'   => '后端上传图片到 Imgur 的时候使用的代理。你可以参考教程：https://2heng.xin/2018/06/06/javascript-upload-images-with-imgur-api/',
+        'desc'   => '後端上傳圖片到 Imgur 的時候使用的代理。你可以參考教程：https://2heng.xin/2018/06/06/javascript-upload-images-with-imgur-api/',
         'default'     => 'https://api.imgur.com/3/image/'
       ),
 
@@ -2303,7 +2303,7 @@ if( class_exists( 'CSF' ) ) {
         'type'   => 'text',
         'title'  => 'SM.MS Secret Token',
         'dependency' => array( 'img_upload_api', '==', 'smms' ),
-        'desc'   => '此处填写Key，获取请访问 https://sm.ms/home/apitoken ',
+        'desc'   => '此處填寫Key，獲取請訪問 https://sm.ms/home/apitoken ',
       ),
 
       array(
@@ -2311,7 +2311,7 @@ if( class_exists( 'CSF' ) ) {
         'type'   => 'text',
         'title'  => 'Chevereto API v1 Key',
         'dependency' => array( 'img_upload_api', '==', 'chevereto' ),
-        'desc'   => '此处填写Key，获取请访问你的Chevereto首页地址/dashboard/settings/api ',
+        'desc'   => '此處填寫Key，獲取請訪問你的Chevereto首頁地址/dashboard/settings/api ',
       ),
 
       array(
@@ -2319,22 +2319,22 @@ if( class_exists( 'CSF' ) ) {
         'type'   => 'text',
         'title'  => 'Chevereto地址',
         'dependency' => array( 'img_upload_api', '==', 'chevereto' ),
-        'desc'   => '你的Chevereto首页地址, 注意结尾没有 /, 例如：https://your.cherverto.com',
+        'desc'   => '你的Chevereto首頁地址, 注意結尾沒有 /, 例如：https://your.cherverto.com',
       ),
 
       array(
         'id'     => 'comment_image_proxy',
         'type'   => 'text',
-        'title'  => '评论图片代理',
-        'desc'   => '前端显示的图片的代理',
+        'title'  => '評論圖片代理',
+        'desc'   => '前端顯示的圖片的代理',
         'default'     => 'https://images.weserv.nl/?url='
       ),
 
       array(
         'id'    => 'mail_img',
         'type'  => 'upload',
-        'title' => '邮件模板特色图片',
-        'desc'   => '设置你的回复邮件上方背景图片',
+        'title' => '郵件模板特色圖片',
+        'desc'   => '設置你的回复郵件上方背景圖片',
         'library'      => 'image',
         'default'     => 'https://cdn.jsdelivr.net/gh/Fuukei/Public_Repository@latest/vision/ultramarine/mail_head.jpg'
       ),
@@ -2342,24 +2342,24 @@ if( class_exists( 'CSF' ) ) {
       array(
         'id'     => 'mail_user_name',
         'type'   => 'text',
-        'title'  => '邮件模板发件地址前缀',
-        'desc'   => '用于发送系统邮件，在用户的邮箱中显示的发件人地址，不要使用中文，默认系统邮件地址为 bibi@你的域名',
+        'title'  => '郵件模板發件地址前綴',
+        'desc'   => '用於發送系統郵件，在用戶的郵箱中顯示的發件人地址，不要使用中文，默認系統郵件地址為 bibi@你的域名',
         'default'     => 'bibi'
       ),
 
       array(
         'id'     => 'mail_notify',
         'type'   => 'switcher',
-        'title'  => '用户邮件回复通知',
-        'label'   => 'WordPress默认会使用邮件通知用户评论收到回复，开启之后允许用户设置自己的评论收到回复时是否使用邮件通知',
+        'title'  => '用戶郵件回复通知',
+        'label'   => 'WordPress默認會使用郵件通知用戶評論收到回复，開啟之後允許用戶設置自己的評論收到回复時是否使用郵件通知',
         'default' => false
       ),
 
       array(
         'id'     => 'admin_notify',
         'type'   => 'switcher',
-        'title'  => '管理员邮件回复通知',
-        'label'   => '开启之后当管理员评论收到回复时使用邮件通知',
+        'title'  => '管理員郵件回复通知',
+        'label'   => '開啟之後當管理員評論收到回复時使用郵件通知',
         'default' => false
       ),
 
@@ -2368,26 +2368,26 @@ if( class_exists( 'CSF' ) ) {
 
   CSF::createSection( $prefix, array(
     'id'    => 'others', 
-    'title' => '其他设置',
+    'title' => '其他設置',
     'icon'      => 'fa fa-coffee',
   ) );
 
   CSF::createSection( $prefix, array(
     'parent' => 'others', 
-    'title'  => '登录界面和仪表盘相关设置',
+    'title'  => '登錄界面和儀錶盤相關設置',
     'icon'      => 'fa fa-sign-in',
     'fields' => array(
 
       array(
         'type'    => 'subheading',
-        'content' => '登录界面',
+        'content' => '登錄界面',
       ),
 
       array(
         'id'    => 'login_background',
         'type'  => 'upload',
-        'title' => '登录界面背景图片',
-        'desc'   => '设置你的登录界面背景图片，此选项留空则显示默认背景',
+        'title' => '登錄界面背景圖片',
+        'desc'   => '設置你的登錄界面背景圖片，此選項留空則顯示默認背景',
         'library'      => 'image',
         'default'     => 'https://cdn.jsdelivr.net/gh/Fuukei/Public_Repository@latest/vision/ultramarine/login_background.jpg'
       ),
@@ -2395,16 +2395,16 @@ if( class_exists( 'CSF' ) ) {
       array(
         'id'     => 'login_blur',
         'type'   => 'switcher',
-        'title'  => '登录界面背景虚化',
-        'label'   => '开启之后登录界面背景图片将被虚化',
+        'title'  => '登錄界面背景虛化',
+        'label'   => '開啟之後登錄界面背景圖片將被虛化',
         'default' => false
       ),
 
       array(
         'id'    => 'login_logo_img',
         'type'  => 'upload',
-        'title' => '登录界面Logo',
-        'desc'   => '设置你的登录界面Logo',
+        'title' => '登錄界面Logo',
+        'desc'   => '設置你的登錄界面Logo',
         'library'      => 'image',
         'default'     => 'https://cdn.jsdelivr.net/gh/Fuukei/Public_Repository@latest/vision/ultramarine/login_logo.png'
       ),
@@ -2412,29 +2412,29 @@ if( class_exists( 'CSF' ) ) {
       array(
         'id'     => 'login_validation',
         'type'   => 'switcher',
-        'title'  => '登录界面滑动验证',
-        'label'   => '开启之后登录需要经过滑动验证',
+        'title'  => '登錄界面滑動驗證',
+        'label'   => '開啟之後登錄需要經過滑動驗證',
         'default' => false
       ),
 
       array(
         'id'     => 'login_urlskip',
         'type'   => 'switcher',
-        'title'  => '登录后跳转',
-        'label'   => '开启之后管理员跳转至后台，用户跳转至主页',
+        'title'  => '登錄後跳轉',
+        'label'   => '開啟之後管理員跳轉至後台，用戶跳轉至主頁',
         'default' => false
       ),
 
       array(
         'type'    => 'subheading',
-        'content' => '仪表盘',
+        'content' => '儀錶盤',
       ),
 
       array(
         'id'    => 'admin_background',
         'type'  => 'upload',
-        'title' => '仪表盘背景图片',
-        'desc'   => '设置你的仪表盘背景图片，此选项留空则显示白色背景',
+        'title' => '儀錶盤背景圖片',
+        'desc'   => '設置你的儀錶盤背景圖片，此選項留空則顯示白色背景',
         'library'      => 'image',
         'default'     => 'https://cdn.jsdelivr.net/gh/Fuukei/Public_Repository@latest/vision/ultramarine/admin_background.jpg'
       ),
@@ -2442,40 +2442,40 @@ if( class_exists( 'CSF' ) ) {
       array(
         'id'      => 'admin_first_class_color',
         'type'    => 'color',
-        'title'   => '仪表盘一级菜单颜色',
-        'desc'    => '自定义颜色',
+        'title'   => '儀錶盤一級菜單顏色',
+        'desc'    => '自定義顏色',
         'default' => '#a9c7d4'
       ),  
 
       array(
         'id'      => 'admin_second_class_color',
         'type'    => 'color',
-        'title'   => '仪表盘二级菜单颜色',
-        'desc'    => '自定义颜色',
+        'title'   => '儀錶盤二級菜單顏色',
+        'desc'    => '自定義顏色',
         'default' => '#98b3bf'
       ),  
 
       array(
         'id'      => 'admin_emphasize_color',
         'type'    => 'color',
-        'title'   => '仪表盘强调颜色',
-        'desc'    => '自定义颜色',
+        'title'   => '儀錶盤強調顏色',
+        'desc'    => '自定義顏色',
         'default' => '#8a8276'
       ),  
 
       array(
         'id'      => 'admin_button_color',
         'type'    => 'color',
-        'title'   => '仪表盘按钮颜色',
-        'desc'    => '自定义颜色',
+        'title'   => '儀錶盤按鈕顏色',
+        'desc'    => '自定義顏色',
         'default' => '#8995ad'
       ),  
 
       array(
         'id'      => 'admin_text_color',
         'type'    => 'color',
-        'title'   => '仪表盘文本颜色',
-        'desc'    => '自定义颜色',
+        'title'   => '儀錶盤文本顏色',
+        'desc'    => '自定義顏色',
       ),  
 
     )
@@ -2483,18 +2483,18 @@ if( class_exists( 'CSF' ) ) {
 
   CSF::createSection( $prefix, array(
     'parent' => 'others', 
-    'title'  => '低使用设置',
+    'title'  => '低使用設置',
     'icon'      => 'fa fa-low-vision',
     'fields' => array(
 
       array(
         'id'         => 'statistics_api',
         'type'       => 'radio',
-        'title'      => '统计接口',
-        'desc'    => '你可以选择WP-Statistics插件统计或者主题内建统计作为统计结果',
+        'title'      => '統計接口',
+        'desc'    => '你可以選擇WP-Statistics插件統計或者主題內建統計作為統計結果',
         'options'    => array(
-          'theme_build_in' => '主题内建统计',
-          'wp_statistics' => 'WP-Statistics插件统计',
+          'theme_build_in' => '主題內建統計',
+          'wp_statistics' => 'WP-Statistics插件統計',
         ),
         'default'    => 'theme_build_in'
       ),
@@ -2502,13 +2502,13 @@ if( class_exists( 'CSF' ) ) {
       array(
         'id'          => 'statistics_format',
         'type'        => 'select',
-        'title'       => '统计数据显示格式',
-        'desc'   => '你可以选择四种不同的数据显示格式',
+        'title'       => '統計數據顯示格式',
+        'desc'   => '你可以選擇四種不同的數據顯示格式',
         'options'     => array(
-          'type_1'  => '23333次访问',
-          'type_2'  => '23,333次访问',
-          'type_3'  => '23 333次访问',
-          'type_4'  => '23K次访问',
+          'type_1'  => '23333次訪問',
+          'type_2'  => '23,333次訪問',
+          'type_3'  => '23 333次訪問',
+          'type_4'  => '23K次訪問',
         ),
         'default'     => 'type_1'
       ),
@@ -2516,45 +2516,53 @@ if( class_exists( 'CSF' ) ) {
       array(
         'id'     => 'live_search',
         'type'   => 'switcher',
-        'title'  => '实时搜索',
-        'label'   => '开启之后将在前台实现实时搜索，调用 Rest API 每小时更新一次缓存，可在 api.php 里手动设置缓存时间',
+        'title'  => '實時搜索',
+        'label'   => '開啟之後將在前台實現實時搜索，調用 Rest API 每小時更新一次緩存，可在 api.php 里手動設置緩存時間',
         'default' => false
       ),
 
       array(
         'id'     => 'live_search_comment',
         'type'   => 'switcher',
-        'title'  => '实时搜索评论支援',
-        'label'   => '开启之后将在可在实时搜索中搜索评论（如果网站评论数量太多不建议开启）',
+        'title'  => '實時搜索評論支援',
+        'label'   => '開啟之後將在可在實時搜索中搜索評論（如果網站評論數量太多不建議開啟）',
         'default' => false
       ),
 
       array(
         'id'     => 'gravatar_proxy',
         'type'   => 'text',
-        'title'  => 'Gravatar头像代理',
-        'desc'   => '填写Gravatar头像的代理地址，默认使用极客族代理，留空则不使用代理',
+        'title'  => 'Gravatar頭像代理',
+        'desc'   => '填寫Gravatar頭像的代理地址，默認使用極客族代理，留空則不使用代理',
         'default'     => 'sdn.geekzu.org/avatar'
       ),
 
       array(
         'id'     => 'google_analytics_id',
         'type'   => 'text',
-        'title'  => '谷歌统计代码',
+        'title'  => '谷歌統計代碼',
       ),
 
       array(
         'id'     => 'site_custom_style',
         'type'   => 'textarea',
-        'title'  => '自定义CSS样式',
-        'desc'   => '填写CSS代码，不需要写style标签',
+        'title'  => '自定義CSS樣式',
+        'desc'   => '填寫CSS代碼，不需要寫style標籤',
+      ),
+
+      array(
+        'id'     => 'block_library_css',
+        'type'   => 'switcher',
+        'title'  => 'WordPress區塊編輯器CSS',
+        'label'   => '開啟之後將加載WordPress區塊編輯器CSS',
+        'default' => false
       ),
 
       array(
         'id'     => 'time_zone_fix',
         'type'   => 'slider',
-        'title'  => '时区修正',
-        'desc'   => '滑动滑块，如果评论出现时差问题在这里调整，填入一个整数，计算方法：实际时间=显示错误的时间-你输入的整数（单位：小时）',
+        'title'  => '時區修正',
+        'desc'   => '滑動滑塊，如果評論出現時差問題在這裡調整，填入一個整數，計算方法：實際時間=顯示錯誤的時間-你輸入的整數（單位：小時）',
         'step'   => '1',
         'max'   => '24',
         'default'    => '0'
@@ -2563,14 +2571,14 @@ if( class_exists( 'CSF' ) ) {
       array(
         'type'    => 'submessage',
         'style'   => 'danger',
-        'content' => '以下设置不推荐盲目进行修改，请在他人的指导下使用',
+        'content' => '以下設置不推薦盲目進行修改，請在他人的指導下使用',
       ),
 
       array(
         'id'     => 'local_global_library',
         'type'   => 'switcher',
-        'title'  => '本地化前端库',
-        'label'   => '开启之后前端库将不走jsDelivr CDN',
+        'title'  => '本地化前端庫',
+        'label'   => '開啟之後前端庫將不走jsDelivr CDN',
         'default' => false
       ),
 
@@ -2578,58 +2586,58 @@ if( class_exists( 'CSF' ) ) {
         'id'     => 'local_application_library',
         'type'   => 'switcher',
         'title'  => '本地化JS/CSS文件',
-        'label'   => '默认开启，部分JS文件和CSS文件不走jsDelivr CDN',
+        'label'   => '默認開啟，部分JS文件和CSS文件不走jsDelivr CDN',
         'default' => true
       ),
 
       array(
         'id'     => 'image_cdn',
         'type'   => 'text',
-        'title'  => '图片CDN',
-        'desc'   => '注意：填写格式为 http(s)://你的CDN域名/。也就是说，原路径为 http://your.domain/wp-content/uploads/2018/05/xx.png 的图片将从 http://你的CDN域名/2018/05/xx.png 加载',
+        'title'  => '圖片CDN',
+        'desc'   => '注意：填寫格式為 http(s)://你的CDN域名/。也就是說，原路徑為 http://your.domain/wp-content/uploads/2018/05/xx.png 的圖片將從 http://你的CDN域名/2018/05/xx.png 加載',
         'default'     => ''
       ),
 
       array(
         'id'     => 'classify_display',
         'type'   => 'text',
-        'title'  => '不显示的文章分类',
-        'desc'   => '填写分类ID，多个用英文“ , ”分开',
+        'title'  => '不顯示的文章分類',
+        'desc'   => '填寫分類ID，多個用英文“ , ”分開',
       ),
 
       array(
         'id'     => 'image_category',
         'type'   => 'text',
-        'title'  => '图片展示分类',
-        'desc'   => '填写分类ID，多个用英文“ , ”分开',
+        'title'  => '圖片展示分類',
+        'desc'   => '填寫分類ID，多個用英文“ , ”分開',
       ),
 
       array(
         'id'     => 'exlogin_url',
         'type'   => 'text',
-        'title'  => '指定登录地址',
-        'desc'   => '强制不使用WordPress登录页面地址登录，填写新建的登陆页面地址，比如：http://www.xxx.com/login。注意填写前先测试下你新建的页面是可以正常打开的，以免造成无法进入后台等情况',
+        'title'  => '指定登錄地址',
+        'desc'   => '強制不使用WordPress登錄頁面地址登錄，填寫新建的登陸頁面地址，比如：http://www.xxx.com/login。注意填寫前先測試下你新建的頁面是可以正常打開的，以免造成無法進入後台等情況',
       ),
 
       array(
         'id'     => 'exregister_url',
         'type'   => 'text',
-        'title'  => '指定注册地址',
-        'desc'   => '该地址在登录页面作为注册入口，如果你指定了登录地址，则建议填写',
+        'title'  => '指定註冊地址',
+        'desc'   => '該地址在登錄頁面作為註冊入口，如果你指定了登錄地址，則建議填寫',
       ),
 
       array(
         'id'     => 'cookie_version',
         'type'   => 'text',
         'title'  => '版本控制',
-        'desc'   => '用于更新前端Cookie和浏览器缓存，可使用任意字符串',
+        'desc'   => '用於更新前端Cookie和瀏覽器緩存，可使用任意字符串',
       ),
 
       array(
         'id'     => 'image_viewer',
         'type'   => 'switcher',
-        'title'  => 'BaguetteBox灯箱效果',
-        'label'   => '开启之后将替换Fancybox作为图片灯箱效果，不建议使用',
+        'title'  => 'BaguetteBox燈箱效果',
+        'label'   => '開啟之後將替換Fancybox作為圖片燈箱效果，不建議使用',
         'default' => false
       ),
 
@@ -2637,9 +2645,9 @@ if( class_exists( 'CSF' ) ) {
   ) );
 
   CSF::createSection($prefix, array(
-    'title'       => '备份恢复',
+    'title'       => '備份恢復',
     'icon'        => 'fa fa-shield',
-    'description' => '备份或恢复你的主题设置',
+    'description' => '備份或恢復你的主題設置',
     'fields'      => array(
 
         array(
@@ -2650,36 +2658,34 @@ if( class_exists( 'CSF' ) ) {
   ) );
 
   CSF::createSection($prefix, array(
-    'title'       => '关于主题',
+    'title'       => '關於主題',
     'icon'        => 'fa fa-paperclip',
     'fields'      => array(
 
       array(
         'type'    => 'content',
-        'content' => '<img src="https://cdn.jsdelivr.net/gh/Fuukei/Public_Repository@latest/vision/options/ultramarinelogo.gif"  alt="主题信息" />',
+        'content' => '<img src="https://cdn.jsdelivr.net/gh/Fuukei/Public_Repository@latest/vision/options/ultramarinelogo.gif"  alt="主題信息" />',
       ),
 
       array(
         'type'    => 'submessage',
         'style'   => 'success',
-        'content' => sprintf(__('正在使用 iro 主题 版本 %s  |  <a href="https://iro.tw">主题文档</a>  |  <a href="https://github.com/mirai-mamori/Sakurairo">源码地址</a>', 'sakurairo'), SAKURA_VERSION), 
+        'content' => sprintf(__('正在使用 iro 主題 版本 %s  |  <a href="https://iro.tw">主題文檔</a>  |  <a href="https://github.com/mirai-mamori/Sakurairo">源碼地址</a>', 'sakurairo'), SAKURA_VERSION), 
       ),
 
       array(
         'id'          => 'iro_update_source',
         'type'        => 'image_select',
-        'title'       => '主题更新源',
+        'title'       => '主題更新源',
         'options'     => array(
           'github'  => 'https://cdn.jsdelivr.net/gh/Fuukei/Public_Repository@latest/vision/options/update_source_github.png',
-          'jsdelivr'  => 'https://cdn.jsdelivr.net/gh/Fuukei/Public_Repository@latest/vision/options/update_source_jsd.png',
-          'official_building'  => 'https://cdn.jsdelivr.net/gh/Fuukei/Public_Repository@latest/vision/options/update_source_iro.png',
         ),
         'default'     => 'github'
       ),
 
       array(
         'type'    => 'content',
-        'content' => '<img src="https://img.shields.io/github/v/release/mirai-mamori/Sakurairo.svg?style=flat-square"  alt="主题最新版本" />  <img src="https://img.shields.io/github/release-date/mirai-mamori/Sakurairo?style=flat-square"  alt="主题最新版本发布时间" />  <img src="https://data.jsdelivr.com/v1/package/gh/Fuukei/Public_Repository/badge"  alt="主题CDN资源访问量" />',
+        'content' => '<img src="https://img.shields.io/github/v/release/mirai-mamori/Sakurairo.svg?style=flat-square"  alt="主題最新版本" />  <img src="https://img.shields.io/github/release-date/mirai-mamori/Sakurairo?style=flat-square"  alt="主題最新版本發佈時間" />  <img src="https://data.jsdelivr.com/v1/package/gh/Fuukei/Public_Repository/badge"  alt="主題CDN資源訪問量" />',
       ),
 
     )

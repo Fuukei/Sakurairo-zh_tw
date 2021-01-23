@@ -29,22 +29,10 @@ $iro_update_source = iro_opt('iro_update_source');
 
 if ($iro_update_source == 'github'){
     $iroThemeUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
-        'https://github.com/mirai-mamori/Sakurairo',
+        'https://github.com/Fuukei/Sakurairo-zh_tw',
         __FILE__,
         'unique-plugin-or-theme-slug'
     );
-}else if ($iro_update_source == 'jsdelivr'){
-	$iroThemeUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
-		'https://update.iro.tw/jsdelivr.json',
-        __FILE__,
-		'Sakurairo'
-	);
-}else if ($iro_update_source == 'official_building'){
-	$iroThemeUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
-		'https://update.iro.tw/local/check.json',
-        __FILE__,
-		'Sakurairo'
-	);
 }
 
 //ini_set('display_errors', true);
@@ -247,8 +235,10 @@ function sakura_scripts()
         }
     } elseif (iro_opt('smoothscroll_option')) {
         wp_enqueue_script('js_lib', 'https://cdn.jsdelivr.net/combine/gh/mirai-mamori/Sakurairo@' . SAKURA_VERSION . '/cdn/js/lib.min.js,gh/mirai-mamori/Sakurairo@' . SAKURA_VERSION . '/cdn/js/src/20.SmoothScroll.js', array(), SAKURA_VERSION, true);
+        wp_enqueue_script('Aplayer', 'https://cdn.jsdelivr.net/combine/gh/mirai-mamori/Sakurairo@' . SAKURA_VERSION .  '/cdn/js/src/07.APlayer.min.js', array(), SAKURA_VERSION, true);
     } else {
         wp_enqueue_script('js_lib', 'https://cdn.jsdelivr.net/gh/mirai-mamori/Sakurairo@' . SAKURA_VERSION . '/cdn/js/lib.min.js', array(), SAKURA_VERSION, true);
+        wp_enqueue_script('Aplayer', 'https://cdn.jsdelivr.net/combine/gh/mirai-mamori/Sakurairo@' . SAKURA_VERSION .  '/cdn/js/src/07.APlayer.min.js', array(), SAKURA_VERSION, true);
     }
     if (iro_opt('local_application_library')) {
         wp_enqueue_style('saukra_css', get_stylesheet_uri(), array(), SAKURA_VERSION);
@@ -274,7 +264,7 @@ function sakura_scripts()
     version_compare($GLOBALS['wp_version'], '5.1', '>=') ? $reply_link_version = 'new' : $reply_link_version = 'old';
     $gravatar_url = iro_opt('gravatar_proxy') ?: 'secure.gravatar.com/avatar';
     wp_localize_script('app', 'Poi', array(
-        'pjax' => iro_opt('poi_pjax'),
+        'pjax' => (bool)iro_opt('poi_pjax'),
         'movies' => $movies,
         'windowheight' => $auto_height,
         'codelamp' => $code_lamp,
@@ -486,10 +476,13 @@ function is_webp(){
     return $webp;
 }
 
-//WordPress 5.0+移除 block-library CSS
-add_action( 'wp_enqueue_scripts', 'fanly_remove_block_library_css', 100 );
-function fanly_remove_block_library_css() {
-	wp_dequeue_style( 'wp-block-library' );
+$block_library_css = iro_opt('block_library_css');
+
+if ($block_library_css != '1'){
+    add_action( 'wp_enqueue_scripts', 'fanly_remove_block_library_css', 100 );
+    function fanly_remove_block_library_css() {
+        wp_dequeue_style( 'wp-block-library' );
+    }
 }
 
 /*
