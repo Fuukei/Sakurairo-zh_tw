@@ -230,15 +230,18 @@ function sakura_scripts()
     if (iro_opt('local_global_library')) {
         wp_enqueue_script('js_lib', get_template_directory_uri() . '/cdn/js/lib.js', array(), SAKURA_VERSION . iro_opt('cookie_version', ''), true);
         wp_enqueue_script('Aplayer', get_template_directory_uri() . '/cdn/js/src/07.APlayer.min.js', array(), SAKURA_VERSION . iro_opt('cookie_version', ''), true);
+        if (iro_opt('aplayer_server') != 'off')wp_enqueue_script('Aplayer', get_template_directory_uri() . '/cdn/js/src/07.APlayer.min.js', array(), SAKURA_VERSION . iro_opt('cookie_version', ''), true);
         if (iro_opt('smoothscroll_option')) {
             wp_enqueue_script('SmoothScroll', get_template_directory_uri() . '/cdn/js/src/20.SmoothScroll.js', array(), SAKURA_VERSION . iro_opt('cookie_version', ''), true);
         }
     } elseif (iro_opt('smoothscroll_option')) {
         wp_enqueue_script('js_lib', 'https://cdn.jsdelivr.net/combine/gh/mirai-mamori/Sakurairo@' . SAKURA_VERSION . '/cdn/js/lib.min.js,gh/mirai-mamori/Sakurairo@' . SAKURA_VERSION . '/cdn/js/src/20.SmoothScroll.js', array(), SAKURA_VERSION, true);
         wp_enqueue_script('Aplayer', 'https://cdn.jsdelivr.net/combine/gh/mirai-mamori/Sakurairo@' . SAKURA_VERSION .  '/cdn/js/src/07.APlayer.min.js', array(), SAKURA_VERSION, true);
+        if (iro_opt('aplayer_server') != 'off')wp_enqueue_script('Aplayer', 'https://cdn.jsdelivr.net/combine/gh/mirai-mamori/Sakurairo@' . SAKURA_VERSION .  '/cdn/js/src/07.APlayer.min.js', array(), SAKURA_VERSION, true);
     } else {
         wp_enqueue_script('js_lib', 'https://cdn.jsdelivr.net/gh/mirai-mamori/Sakurairo@' . SAKURA_VERSION . '/cdn/js/lib.min.js', array(), SAKURA_VERSION, true);
         wp_enqueue_script('Aplayer', 'https://cdn.jsdelivr.net/combine/gh/mirai-mamori/Sakurairo@' . SAKURA_VERSION .  '/cdn/js/src/07.APlayer.min.js', array(), SAKURA_VERSION, true);
+        if (iro_opt('aplayer_server') != 'off')wp_enqueue_script('Aplayer', 'https://cdn.jsdelivr.net/combine/gh/mirai-mamori/Sakurairo@' . SAKURA_VERSION .  '/cdn/js/src/07.APlayer.min.js', array(), SAKURA_VERSION, true);
     }
     if (iro_opt('local_application_library')) {
         wp_enqueue_style('saukra_css', get_stylesheet_uri(), array(), SAKURA_VERSION);
@@ -926,7 +929,7 @@ function comment_mail_notify($comment_id)
     </div>
 ';
         $message = convert_smilies($message);
-        $message = str_replace("{{", '<img src="https://cdn.jsdelivr.net/gh/Fuukei/Public_Repository@0.6.0/vision/smilies/bilipng/emoji_', $message);
+        $message = str_replace("{{", '<img src="https://cdn.jsdelivr.net/gh/Fuukei/Public_Repository@0.6.1/vision/smilies/bilipng/emoji_', $message);
         $message = str_replace("}}", '.png" alt="emoji" style="height: 2em; max-height: 2em;">', $message);
 
         $message = str_replace('{UPLOAD}', 'https://i.loli.net/', $message);
