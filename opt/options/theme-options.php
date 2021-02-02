@@ -322,6 +322,7 @@ if( class_exists( 'CSF' ) ) {
         'dependency' => array( 'nav_menu_style', '==', 'sakurairo' ),
         'desc'   => '滑動滑塊，推薦數值為15',
         'unit'    => 'px',
+        'max'   => '50',
         'default' => '15'
       ),
 
@@ -426,6 +427,17 @@ if( class_exists( 'CSF' ) ) {
       ),
 
       array(
+        'id'    => 'nav_menu_secondary_radius',
+        'type'  => 'slider',
+        'title' => '導航菜單二級菜單圓角',
+        'dependency' => array( 'nav_menu_style', '==', 'sakurairo' ),
+        'desc'   => '滑動滑塊，推薦數值為15',
+        'unit'    => 'px',
+        'max'   => '30',
+        'default' => '15'
+      ),
+
+      array(
         'id'     => 'logo_text',
         'type'   => 'text',
         'title'  => '導航菜單文字Logo文本',
@@ -514,9 +526,10 @@ if( class_exists( 'CSF' ) ) {
         'id'    => 'style_menu_radius',
         'type'  => 'slider',
         'title' => '樣式菜單按鈕圓角',
-        'desc'   => '滑動滑塊，推薦數值為12',
+        'desc'   => '滑動滑塊，推薦數值為10',
         'unit'    => 'px',
-        'default' => '12'
+        'max'   => '50',
+        'default' => '10'
       ),
 
       array(
@@ -541,6 +554,7 @@ if( class_exists( 'CSF' ) ) {
         'title' => '樣式菜單選項界面圓角',
         'desc'   => '滑動滑塊，推薦數值為15',
         'unit'    => 'px',
+        'max'   => '30',
         'default' => '15'
       ),
 
@@ -1103,6 +1117,7 @@ if( class_exists( 'CSF' ) ) {
         'title' => '封面簽名欄圓角',
         'desc'   => '滑動滑塊，推薦數值範圍為10-20',
         'unit'    => 'px',
+        'max'    => '50',
         'default' => '15'
       ),
 
