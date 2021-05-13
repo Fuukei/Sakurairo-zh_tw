@@ -16,21 +16,21 @@ $text_logo = iro_opt('text_logo');
          <div class="header-tou" ><a href="<?php bloginfo('url');?>"><img src="https://cdn.jsdelivr.net/gh/Fuukei/Public_Repository@latest/vision/ultramarine/avatar.jpg"></a></div>	
       	<?php endif; ?>
 		<div class="header-info">
-			<!-- 首页一言打字效果 -->
+			<!-- 首頁一言打字效果 -->
 			<?php if (iro_opt('signature_typing', 'true')): ?>
 			<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js"></script>
 			<?php if (iro_opt('signature_typing_marks', 'true')): ?><i class="fa fa-quote-left"></i><?php endif; ?>
-			<span class="element">疯狂造句中......</span>
+			<span class="element">瘋狂造句中......</span>
 			<?php if (iro_opt('signature_typing_marks', 'true')): ?><i class="fa fa-quote-right"></i><?php endif; ?>
 			<span class="element"></span>
 			<script>
             var typed = new Typed('.element', {
-              strings: ["给时光以生命，给岁月以文明",<?php echo iro_opt('signature_typing_text', ''); ?>,], //输入内容, 支持html标签
+              strings: ["給時光以生命，給歲月以文明",<?php echo iro_opt('signature_typing_text', ''); ?>,], //輸入內容, 支持html標籤
               typeSpeed: 140, //打字速度
               backSpeed: 50, //回退速度
-              loop: false,//是否循环
+              loop: false,//是否迴圈
               loopCount: Infinity,
-              showCursor: true//是否开启光标
+              showCursor: true//是否開啟游標
             });
             </script>
             <?php endif; ?>
@@ -190,7 +190,7 @@ $text_logo = iro_opt('text_logo');
 <?php
 echo bgvideo(); //BGVideo 
 ?>
-<!-- 首页下拉箭头 -->
+<!-- 首頁下拉箭頭 -->
 <?php if (iro_opt('drop_down_arrow', 'true')): ?>
 <div class="headertop-down faa-float animated" onclick="headertop_down()"><span><i class="fa fa-chevron-down" aria-hidden="true" style="color:<?php echo iro_opt('drop_down_arrow_color'); ?>"></i></span></div>
 <?php endif; ?>
