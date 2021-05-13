@@ -1,6 +1,6 @@
 <?php 
 /**
- Template Name: 登录页面模版
+ Template Name: 登入頁面模版
  */
 
 get_header();
@@ -19,7 +19,7 @@ get_header();
 					<input type="hidden" name="redirect_to" value="<?php echo $_SERVER['REQUEST_URI']; ?>" />
 					<input class="button login-button" name="submit" type="submit" value="登 入">
 				</form>
-				<div class="ex-new-account" style="padding: 0;"><p>请先注册！Register first, plz!</p><p><a href="<?php echo iro_opt('exregister_url') ? iro_opt('exregister_url') : bloginfo('url'); ?>" target="_blank">Register</a>|<a href="<?php echo site_url(); ?>/wp-login.php?action=lostpassword" target="_blank">Lost your password?</a></p></div>
+				<div class="ex-new-account" style="padding: 0;"><p>請先註冊！Register first, plz!</p><p><a href="<?php echo iro_opt('exregister_url') ? iro_opt('exregister_url') : bloginfo('url'); ?>" target="_blank">Register</a>|<a href="<?php echo site_url(); ?>/wp-login.php?action=lostpassword" target="_blank">Lost your password?</a></p></div>
 			</div>
 		<?php }else{ echo Exuser_center(); } ?>
 		</main><!-- #main -->
