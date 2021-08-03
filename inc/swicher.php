@@ -79,7 +79,7 @@ mashiro_option.entry_content_style = "<?php echo iro_opt('entry_content_style');
 <?php if(iro_opt('local_global_library')){ ?>
 mashiro_option.jsdelivr_css_src = "<?php echo get_template_directory_uri() ?>/cdn/css/lib.css?<?php echo SAKURA_VERSION.iro_opt('cookie_version', ''); ?>";
 <?php } else { ?>
-mashiro_option.jsdelivr_css_src = "https://cdn.jsdelivr.net/gh/mirai-mamori/Sakurairo@<?php echo SAKURA_VERSION; ?>/cdn/css/lib.min.css";
+mashiro_option.jsdelivr_css_src = "https://cdn.jsdelivr.net/gh/Fuukei/Sakurairo-zh_tw@<?php echo SAKURA_VERSION; ?>/cdn/css/lib.min.css";
 <?php } ?>
 <?php if (iro_opt('aplayer_server') != 'off'): ?>
 mashiro_option.float_player_on = true;
