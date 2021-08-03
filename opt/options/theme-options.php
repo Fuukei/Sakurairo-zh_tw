@@ -2761,6 +2761,17 @@ if( class_exists( 'CSF' ) ) {
       ),
 
       array(
+        'id'          => 'iro_update_source_channel',
+        'type'        => 'select',
+        'title'       => '主題更新版本',
+        'options'     => array(
+          'uni_version'  => '主線版本（最新）',
+          'zh_tw_version'  => '繁體中文版本（已停止維護）',
+        ),
+        'default'     => 'uni_version'
+      ),
+
+      array(
         'type'    => 'subheading',
         'content' => '本地化',
       ),

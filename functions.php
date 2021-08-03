@@ -26,14 +26,24 @@ if (! function_exists('iro_opt')) {
 
 require 'update-checker/update-checker.php';
 $iro_update_source = iro_opt('iro_update_source');
+$iro_update_source_channel = iro_opt('iro_update_source_channel');
 
 if ($iro_update_source == 'github'){
-    $iroThemeUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
-        'https://github.com/Fuukei/Sakurairo-zh_tw',
-        __FILE__,
-        'unique-plugin-or-theme-slug'
-    );
+    if ($iro_update_source_channel == 'uni_version'){
+        $iroThemeUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
+            'https://github.com/mirai-mamori/Sakurairo',
+            __FILE__,
+            'unique-plugin-or-theme-slug'
+        );
+    }else if ($iro_update_source_channel == 'zh_tw_version'){
+        $iroThemeUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
+            'https://github.com/Fuukei/Sakurairo-zh_tw',
+            __FILE__,
+            'unique-plugin-or-theme-slug'
+        );
+    }
 }
+
 
 //ini_set('display_errors', true);
 //error_reporting(E_ALL);
